@@ -1,184 +1,408 @@
-<!-- ================= V7 HERO SECTION REPLACE CURRENT HERO ================= -->
-
-<section class="hero reveal">
-  <div style="display:grid;grid-template-columns:1.45fr .85fr;gap:34px;align-items:center">
-
-    <!-- LEFT CONTENT -->
-    <div>
-
-      <div class="eyebrow">SENIOR PRODUCT MANAGER • FINTECH • DIGITAL PLATFORMS</div>
-
-      <h1 style="
-      font-size:72px;
-      line-height:0.95;
-      font-weight:800;
-      letter-spacing:-2px;
-      margin:18px 0;
-      max-width:900px;
-      ">
-        I build lending products<br>
-        that turn <span style="
-        background:linear-gradient(90deg,#22c55e,#5eead4,#22c55e);
-        -webkit-background-clip:text;
-        -webkit-text-fill-color:transparent;
-        ">complexity</span><br>
-        into growth.
-      </h1>
-
-      <p style="
-      font-size:24px;
-      line-height:1.45;
-      color:#9aa3b2;
-      max-width:760px;
-      margin-top:22px;
-      ">
-        Senior Product Manager delivering measurable business outcomes through APIs,
-        automation, customer journeys, and scalable lending platforms across ICICI Bank
-        and digital ecosystems.
-      </p>
-
-      <!-- CTA -->
-      <div style="margin-top:30px;display:flex;gap:14px;flex-wrap:wrap">
-        <a href="#projects" class="cta">VIEW WORK</a>
-        <a href="resume.pdf" target="_blank" class="cta secondary">RESUME</a>
-      </div>
-
-      <!-- METRICS -->
-      <div style="
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:18px;
-      margin-top:42px;
-      ">
-
-        <div class="metric glass">
-          <div class="num">₹500M+</div>
-          <div>Portfolio Scale</div>
-        </div>
-
-        <div class="metric glass">
-          <div class="num">370%</div>
-          <div>Growth Delivered</div>
-        </div>
-
-        <div class="metric glass">
-          <div class="num">537%</div>
-          <div>Customer Expansion</div>
-        </div>
-
-        <div class="metric glass">
-          <div class="num">28%</div>
-          <div>Failures Reduced</div>
-        </div>
-
-      </div>
-
-    </div>
-
-    <!-- RIGHT PROFILE CARD -->
-    <div class="glass" style="
-    padding:34px;
-    border-radius:26px;
-    text-align:center;
-    position:relative;
-    overflow:hidden;
-    ">
-
-      <img src="profile.jpg"
-      style="
-      width:230px;
-      height:230px;
-      border-radius:50%;
-      object-fit:cover;
-      object-position:30% 23%;
-      border:5px solid #22c55e;
-      display:block;
-      margin:auto;
-      box-shadow:0 20px 40px rgba(34,197,94,.25);
-      ">
-
-      <h3 style="margin-top:24px;font-size:30px">Sri Naga Vijay Kethe</h3>
-
-      <p style="
-      color:#9aa3b2;
-      margin-top:10px;
-      font-size:18px;
-      ">
-      Senior Product Manager • Fintech • AI Products
-      </p>
-
-      <div style="
-      display:flex;
-      justify-content:center;
-      gap:10px;
-      flex-wrap:wrap;
-      margin-top:20px;
-      ">
-
-        <span class="tag">₹500M Scale</span>
-        <span class="tag">Growth</span>
-        <span class="tag">Builder</span>
-
-      </div>
-
-      <div style="margin-top:24px">
-        <a href="#contact" class="cta">LET'S CONNECT</a>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-<!-- ================= ADD CSS BELOW YOUR STYLE SECTION ================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sri Naga Vijay Kethe | Senior Product Manager</title>
 
 <style>
-.hero{padding:70px 0 40px}
-.hero h1{color:#f5f7fb}
-.cta.secondary{
+:root{
+--bg:#05070d;
+--card:#0d111c;
+--line:#1d2333;
+--text:#f5f7fb;
+--muted:#98a2b3;
+--green:#22c55e;
+--green2:#67e8f9;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+font-family:Inter,Arial,sans-serif;
+background:var(--bg);
+color:var(--text);
+}
+
+.wrap{max-width:1320px;margin:auto;padding:0 28px}
+
+/* NAV */
+nav{
+position:sticky;top:0;z-index:1000;
+background:rgba(5,7,13,.92);
+backdrop-filter:blur(12px);
+border-bottom:1px solid rgba(255,255,255,.05);
+}
+.nav-inner{
+display:flex;justify-content:space-between;align-items:center;
+padding:18px 0;
+}
+.brand{font-size:28px;font-weight:800}
+.menu{display:flex;gap:26px;align-items:center;flex-wrap:wrap}
+.menu a{
+color:#c7ced8;text-decoration:none;font-size:14px;font-weight:700;
+}
+.menu a:hover{color:#fff}
+.cta{
+background:var(--green);
+color:#04120a !important;
+padding:12px 20px;
+border-radius:999px;
+font-weight:800;
+display:inline-block;
+text-decoration:none;
+}
+.secondary{
 background:transparent;
 border:1px solid rgba(255,255,255,.12);
-color:#fff;
+color:#fff !important;
 }
+
+/* HERO */
+.hero{
+padding:70px 0 40px;
+display:grid;
+grid-template-columns:1.4fr .8fr;
+gap:36px;
+align-items:center;
+}
+
+.eyebrow{
+color:var(--green);
+font-size:15px;
+font-weight:800;
+letter-spacing:2px;
+margin-bottom:18px;
+}
+
+h1{
+font-size:78px;
+line-height:.95;
+font-weight:900;
+letter-spacing:-2px;
+}
+
+.grad{
+background:linear-gradient(90deg,var(--green),var(--green2),var(--green));
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.sub{
+font-size:24px;
+line-height:1.45;
+color:var(--muted);
+margin-top:24px;
+max-width:760px;
+}
+
+.actions{
+display:flex;
+gap:14px;
+margin-top:30px;
+flex-wrap:wrap;
+}
+
+/* METRICS */
+.metrics{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px;
+margin-top:42px;
+}
+
+.card{
+background:var(--card);
+border:1px solid var(--line);
+border-radius:24px;
+padding:22px;
+}
+
+.num{
+font-size:42px;
+font-weight:900;
+color:var(--green);
+line-height:1;
+margin-bottom:8px;
+}
+
+.small{color:#dbe2ea}
+
+/* PROFILE CARD */
+.profile{
+text-align:center;
+padding:34px;
+}
+
+.profile img{
+width:240px;
+height:240px;
+border-radius:50%;
+object-fit:cover;
+object-position:30% 23%;
+border:5px solid var(--green);
+box-shadow:0 20px 40px rgba(34,197,94,.25);
+display:block;
+margin:auto;
+}
+
+.profile h3{
+font-size:30px;
+margin-top:22px;
+}
+
+.profile p{
+color:var(--muted);
+margin-top:10px;
+font-size:18px;
+}
+
+.tags{
+display:flex;
+justify-content:center;
+gap:10px;
+flex-wrap:wrap;
+margin-top:18px;
+}
+
 .tag{
 padding:8px 14px;
 border-radius:999px;
 background:rgba(34,197,94,.12);
-color:#7dff9a;
+color:#8cffad;
 font-size:14px;
 }
-.metric{
-padding:22px;
-border-radius:22px;
+
+/* SECTION */
+section.block{
+padding:70px 0;
 }
-.metric .num{
-font-size:42px;
-font-weight:800;
-color:#22c55e;
+
+.title{
+font-size:48px;
+font-weight:900;
 line-height:1;
-margin-bottom:8px;
+margin-bottom:24px;
 }
-@media(max-width:900px){
-.hero div[style*="grid-template-columns:1.45fr .85fr"]{
-grid-template-columns:1fr !important;
+
+.grid3{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
 }
-.hero h1{
-font-size:52px !important;
+
+.card h4{
+font-size:22px;
+margin-bottom:12px;
 }
-.metric .num{
-font-size:34px;
+
+.card p{
+color:var(--muted);
+line-height:1.6;
 }
+
+/* FOOTER */
+footer{
+padding:60px 0;
+border-top:1px solid rgba(255,255,255,.06);
+text-align:center;
+color:var(--muted);
 }
-@media(max-width:640px){
-.hero h1{
-font-size:40px !important;
-line-height:1;
+
+/* MOBILE */
+@media(max-width:1000px){
+.hero{grid-template-columns:1fr}
+.metrics{grid-template-columns:1fr 1fr}
+h1{font-size:58px}
 }
-.hero p{
-font-size:18px !important;
-}
-.hero div[style*="repeat(4,1fr)"]{
-grid-template-columns:1fr 1fr !important;
-}
+
+@media(max-width:700px){
+.menu{display:none}
+h1{font-size:42px}
+.sub{font-size:18px}
+.metrics{grid-template-columns:1fr}
+.grid3{grid-template-columns:1fr}
+.profile img{width:190px;height:190px}
+.title{font-size:34px}
 }
 </style>
+</head>
+
+<body>
+
+<nav>
+<div class="wrap nav-inner">
+<div class="brand">Sri Naga Vijay Kethe</div>
+
+<div class="menu">
+<a href="#impact">IMPACT</a>
+<a href="#projects">PROJECTS</a>
+<a href="#career">CAREER</a>
+<a href="#skills">SKILLS</a>
+<a href="#contact" class="cta">LET'S CONNECT</a>
+</div>
+</div>
+</nav>
+
+<div class="wrap">
+
+<!-- HERO -->
+<section class="hero">
+
+<div>
+<div class="eyebrow">SENIOR PRODUCT MANAGER • FINTECH • DIGITAL PLATFORMS</div>
+
+<h1>
+I build lending products<br>
+that turn <span class="grad">complexity</span><br>
+into growth.
+</h1>
+
+<p class="sub">
+Senior Product Manager delivering measurable business outcomes through APIs,
+automation, customer journeys, and scalable lending platforms across ICICI Bank
+and digital ecosystems.
+</p>
+
+<div class="actions">
+<a href="#projects" class="cta">VIEW WORK</a>
+<a href="resume.pdf" target="_blank" class="cta secondary">RESUME</a>
+</div>
+
+<div class="metrics">
+<div class="card">
+<div class="num">₹500M+</div>
+<div class="small">Portfolio Scale</div>
+</div>
+
+<div class="card">
+<div class="num">370%</div>
+<div class="small">Growth Delivered</div>
+</div>
+
+<div class="card">
+<div class="num">537%</div>
+<div class="small">Customer Expansion</div>
+</div>
+
+<div class="card">
+<div class="num">28%</div>
+<div class="small">Failures Reduced</div>
+</div>
+</div>
+</div>
+
+<div class="card profile">
+<img src="profile.jpg" alt="Vijay Kethe">
+
+<h3>Sri Naga Vijay Kethe</h3>
+<p>Senior Product Manager • Fintech • AI Products</p>
+
+<div class="tags">
+<span class="tag">₹500M Scale</span>
+<span class="tag">Growth</span>
+<span class="tag">Builder</span>
+</div>
+
+<div style="margin-top:24px">
+<a href="#contact" class="cta">LET'S CONNECT</a>
+</div>
+</div>
+
+</section>
+
+<!-- IMPACT -->
+<section class="block" id="impact">
+<div class="title">Business Impact Delivered.</div>
+
+<div class="grid3">
+<div class="card">
+<h4>Loan Against Securities</h4>
+<p>Built scalable digital platform covering shares, mutual funds and sovereign gold bonds.</p>
+</div>
+
+<div class="card">
+<h4>Revenue Growth</h4>
+<p>Delivered 370% business growth through customer journey optimization and product improvements.</p>
+</div>
+
+<div class="card">
+<h4>Operational Efficiency</h4>
+<p>Reduced failures by 28% through automation, tracking and funnel fixes.</p>
+</div>
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section class="block" id="projects">
+<div class="title">Projects Built.</div>
+
+<div class="grid3">
+<div class="card">
+<h4>Loan Against Securities</h4>
+<p>End-to-end secured lending platform from eligibility to disbursal.</p>
+</div>
+
+<div class="card">
+<h4>Cross Sell Engine</h4>
+<p>Data-led growth engine driving higher customer adoption across products.</p>
+</div>
+
+<div class="card">
+<h4>Sentinel</h4>
+<p>AI decision-support system simplifying financial understanding and automating responses.</p>
+</div>
+</div>
+</section>
+
+<!-- CAREER -->
+<section class="block" id="career">
+<div class="title">Career Journey.</div>
+
+<div class="grid3">
+<div class="card">
+<h4>ICICI Bank</h4>
+<p>Senior Product Manager leading lending and digital platform growth.</p>
+</div>
+
+<div class="card">
+<h4>Product Leadership</h4>
+<p>Owned roadmap, stakeholders, execution and measurable business outcomes.</p>
+</div>
+
+<div class="card">
+<h4>IIT BHU</h4>
+<p>Integrated Dual Degree in Biochemical Engineering.</p>
+</div>
+</div>
+</section>
+
+<!-- SKILLS -->
+<section class="block" id="skills">
+<div class="title">What I Bring.</div>
+
+<div class="grid3">
+<div class="card"><h4>Product Strategy</h4><p>Roadmaps, prioritization, growth planning.</p></div>
+<div class="card"><h4>Execution</h4><p>Cross-functional delivery, agile shipping.</p></div>
+<div class="card"><h4>Data + AI</h4><p>Analytics, APIs, automation, AI products.</p></div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section class="block" id="contact">
+<div class="title">Let's Build Something Valuable.</div>
+
+<div class="actions">
+<a href="mailto:kethesrinagavijay@gmail.com" class="cta">EMAIL ME</a>
+<a href="resume.pdf" target="_blank" class="cta secondary">DOWNLOAD RESUME</a>
+</div>
+</section>
+
+</div>
+
+<footer>
+© 2026 Sri Naga Vijay Kethe • Built on GitHub Pages
+</footer>
+
+</body>
+</html>
