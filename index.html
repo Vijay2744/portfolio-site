@@ -3,158 +3,190 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sri Naga Vijay Kethe | Senior Product Manager</title>
+<title>Sri Naga Vijay Kethe | Portfolio</title>
 
 <style>
 :root{
---bg:#05070d;
---card:#0d111c;
---line:#1d2333;
+--bg:#06080f;
+--card:#111522;
+--line:#1f2638;
 --text:#f5f7fb;
---muted:#98a2b3;
+--muted:#97a3b6;
 --green:#22c55e;
---green2:#67e8f9;
 }
 
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
+
 body{
 font-family:Inter,Arial,sans-serif;
 background:var(--bg);
 color:var(--text);
 }
 
-.wrap{max-width:1320px;margin:auto;padding:0 28px}
+.wrap{
+max-width:1250px;
+margin:auto;
+padding:0 24px;
+}
 
 /* NAV */
 nav{
-position:sticky;top:0;z-index:1000;
-background:rgba(5,7,13,.92);
-backdrop-filter:blur(12px);
+position:sticky;
+top:0;
+z-index:1000;
+background:rgba(6,8,15,.92);
+backdrop-filter:blur(10px);
 border-bottom:1px solid rgba(255,255,255,.05);
 }
+
 .nav-inner{
-display:flex;justify-content:space-between;align-items:center;
+display:flex;
+justify-content:space-between;
+align-items:center;
 padding:18px 0;
+gap:20px;
 }
-.brand{font-size:28px;font-weight:800}
-.menu{display:flex;gap:26px;align-items:center;flex-wrap:wrap}
+
+.brand{
+font-size:24px;
+font-weight:800;
+white-space:nowrap;
+}
+
+.menu{
+display:flex;
+gap:18px;
+overflow-x:auto;
+white-space:nowrap;
+scrollbar-width:none;
+}
+
+.menu::-webkit-scrollbar{display:none;}
+
 .menu a{
-color:#c7ced8;text-decoration:none;font-size:14px;font-weight:700;
+color:#c8d0dc;
+text-decoration:none;
+font-size:14px;
+font-weight:700;
+padding:8px 0;
 }
+
 .menu a:hover{color:#fff}
+
 .cta{
 background:var(--green);
 color:#04120a !important;
-padding:12px 20px;
+padding:11px 18px;
 border-radius:999px;
 font-weight:800;
-display:inline-block;
 text-decoration:none;
-}
-.secondary{
-background:transparent;
-border:1px solid rgba(255,255,255,.12);
-color:#fff !important;
+display:inline-block;
 }
 
 /* HERO */
 .hero{
 padding:70px 0 40px;
 display:grid;
-grid-template-columns:1.4fr .8fr;
-gap:36px;
+grid-template-columns:1.35fr .8fr;
+gap:30px;
 align-items:center;
 }
 
 .eyebrow{
 color:var(--green);
-font-size:15px;
+font-size:13px;
 font-weight:800;
 letter-spacing:2px;
 margin-bottom:18px;
 }
 
-h1{
-font-size:78px;
-line-height:.95;
+.hero h1{
+font-size:64px;
+line-height:1;
 font-weight:900;
 letter-spacing:-2px;
+max-width:780px;
 }
 
-.grad{
-background:linear-gradient(90deg,var(--green),var(--green2),var(--green));
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-}
+.hero h1 span{color:var(--green)}
 
 .sub{
-font-size:24px;
-line-height:1.45;
+margin-top:22px;
+font-size:22px;
+line-height:1.5;
 color:var(--muted);
-margin-top:24px;
-max-width:760px;
+max-width:720px;
 }
 
 .actions{
+margin-top:28px;
 display:flex;
 gap:14px;
-margin-top:30px;
 flex-wrap:wrap;
+}
+
+.secondary{
+background:transparent;
+border:1px solid rgba(255,255,255,.14);
+color:#fff !important;
 }
 
 /* METRICS */
 .metrics{
 display:grid;
 grid-template-columns:repeat(4,1fr);
-gap:18px;
-margin-top:42px;
+gap:16px;
+margin-top:38px;
 }
 
 .card{
 background:var(--card);
 border:1px solid var(--line);
-border-radius:24px;
+border-radius:22px;
 padding:22px;
 }
 
-.num{
-font-size:42px;
+.metric-num{
+font-size:38px;
 font-weight:900;
 color:var(--green);
 line-height:1;
 margin-bottom:8px;
 }
 
-.small{color:#dbe2ea}
+.small{
+color:#dbe4ee;
+font-size:15px;
+}
 
-/* PROFILE CARD */
+/* PROFILE */
 .profile{
 text-align:center;
-padding:34px;
+padding:28px;
 }
 
 .profile img{
-width:240px;
-height:240px;
+width:210px;
+height:210px;
 border-radius:50%;
 object-fit:cover;
 object-position:30% 23%;
-border:5px solid var(--green);
-box-shadow:0 20px 40px rgba(34,197,94,.25);
+border:4px solid var(--green);
 display:block;
 margin:auto;
+box-shadow:0 18px 35px rgba(34,197,94,.25);
 }
 
 .profile h3{
-font-size:30px;
-margin-top:22px;
+font-size:28px;
+margin-top:20px;
 }
 
 .profile p{
 color:var(--muted);
-margin-top:10px;
-font-size:18px;
+margin-top:8px;
+font-size:17px;
 }
 
 .tags{
@@ -169,26 +201,25 @@ margin-top:18px;
 padding:8px 14px;
 border-radius:999px;
 background:rgba(34,197,94,.12);
-color:#8cffad;
-font-size:14px;
+color:#8effb0;
+font-size:13px;
 }
 
-/* SECTION */
+/* SECTIONS */
 section.block{
-padding:70px 0;
+padding:60px 0;
 }
 
 .title{
-font-size:48px;
+font-size:42px;
 font-weight:900;
-line-height:1;
-margin-bottom:24px;
+margin-bottom:22px;
 }
 
 .grid3{
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:20px;
+gap:18px;
 }
 
 .card h4{
@@ -203,27 +234,61 @@ line-height:1.6;
 
 /* FOOTER */
 footer{
-padding:60px 0;
-border-top:1px solid rgba(255,255,255,.06);
+padding:50px 0;
 text-align:center;
 color:var(--muted);
+border-top:1px solid rgba(255,255,255,.06);
+margin-top:20px;
 }
 
 /* MOBILE */
 @media(max-width:1000px){
-.hero{grid-template-columns:1fr}
-.metrics{grid-template-columns:1fr 1fr}
-h1{font-size:58px}
+.hero{
+grid-template-columns:1fr;
+}
+.metrics{
+grid-template-columns:1fr 1fr;
+}
+.hero h1{
+font-size:52px;
+}
 }
 
 @media(max-width:700px){
-.menu{display:none}
-h1{font-size:42px}
-.sub{font-size:18px}
-.metrics{grid-template-columns:1fr}
-.grid3{grid-template-columns:1fr}
-.profile img{width:190px;height:190px}
-.title{font-size:34px}
+.wrap{padding:0 16px}
+
+.brand{
+font-size:20px;
+}
+
+.hero{
+padding-top:45px;
+}
+
+.hero h1{
+font-size:40px;
+}
+
+.sub{
+font-size:18px;
+}
+
+.metrics{
+grid-template-columns:1fr;
+}
+
+.grid3{
+grid-template-columns:1fr;
+}
+
+.profile img{
+width:180px;
+height:180px;
+}
+
+.title{
+font-size:32px;
+}
 }
 </style>
 </head>
@@ -236,10 +301,12 @@ h1{font-size:42px}
 
 <div class="menu">
 <a href="#impact">IMPACT</a>
-<a href="#projects">PROJECTS</a>
+<a href="#strategy">STRATEGY</a>
+<a href="#scale">SCALE</a>
 <a href="#career">CAREER</a>
+<a href="#projects">PROJECTS</a>
 <a href="#skills">SKILLS</a>
-<a href="#contact" class="cta">LET'S CONNECT</a>
+<a href="#contact" class="cta">CONNECT</a>
 </div>
 </div>
 </nav>
@@ -253,42 +320,42 @@ h1{font-size:42px}
 <div class="eyebrow">SENIOR PRODUCT MANAGER • FINTECH • DIGITAL PLATFORMS</div>
 
 <h1>
-I build lending products<br>
-that turn <span class="grad">complexity</span><br>
-into growth.
+I turn <span>complex lending systems</span><br>
+into simple digital experiences.
 </h1>
 
 <p class="sub">
 Senior Product Manager delivering measurable business outcomes through APIs,
-automation, customer journeys, and scalable lending platforms across ICICI Bank
-and digital ecosystems.
+automation, customer journeys, and scalable lending products.
 </p>
 
 <div class="actions">
 <a href="#projects" class="cta">VIEW WORK</a>
-<a href="resume.pdf" target="_blank" class="cta secondary">RESUME</a>
+<a href="resume.pdf" target="_blank" class="cta secondary">DOWNLOAD RESUME</a>
 </div>
 
 <div class="metrics">
+
 <div class="card">
-<div class="num">₹500M+</div>
-<div class="small">Portfolio Scale</div>
+<div class="metric-num">₹500M</div>
+<div class="small">Monthly Scale</div>
 </div>
 
 <div class="card">
-<div class="num">370%</div>
+<div class="metric-num">370%</div>
 <div class="small">Growth Delivered</div>
 </div>
 
 <div class="card">
-<div class="num">537%</div>
+<div class="metric-num">537%</div>
 <div class="small">Customer Expansion</div>
 </div>
 
 <div class="card">
-<div class="num">28%</div>
+<div class="metric-num">28%</div>
 <div class="small">Failures Reduced</div>
 </div>
+
 </div>
 </div>
 
@@ -313,95 +380,139 @@ and digital ecosystems.
 
 <!-- IMPACT -->
 <section class="block" id="impact">
-<div class="title">Business Impact Delivered.</div>
+<div class="title">Impact</div>
 
 <div class="grid3">
 <div class="card">
 <h4>Loan Against Securities</h4>
-<p>Built scalable digital platform covering shares, mutual funds and sovereign gold bonds.</p>
+<p>Scaled digital lending portfolio with faster journeys and improved conversion.</p>
 </div>
 
 <div class="card">
 <h4>Revenue Growth</h4>
-<p>Delivered 370% business growth through customer journey optimization and product improvements.</p>
+<p>Delivered measurable commercial growth through product improvements.</p>
 </div>
 
 <div class="card">
-<h4>Operational Efficiency</h4>
-<p>Reduced failures by 28% through automation, tracking and funnel fixes.</p>
+<h4>Operational Excellence</h4>
+<p>Reduced friction and failures through automation and better workflows.</p>
 </div>
 </div>
 </section>
 
-<!-- PROJECTS -->
-<section class="block" id="projects">
-<div class="title">Projects Built.</div>
+<!-- STRATEGY -->
+<section class="block" id="strategy">
+<div class="title">Strategy</div>
 
 <div class="grid3">
 <div class="card">
-<h4>Loan Against Securities</h4>
-<p>End-to-end secured lending platform from eligibility to disbursal.</p>
+<h4>Customer First</h4>
+<p>Build simple experiences for complex financial products.</p>
 </div>
 
 <div class="card">
-<h4>Cross Sell Engine</h4>
-<p>Data-led growth engine driving higher customer adoption across products.</p>
+<h4>Data Driven</h4>
+<p>Use metrics, funnels, and insights to prioritize growth.</p>
 </div>
 
 <div class="card">
-<h4>Sentinel</h4>
-<p>AI decision-support system simplifying financial understanding and automating responses.</p>
+<h4>Execution Focused</h4>
+<p>Move ideas from roadmap to launch quickly and effectively.</p>
+</div>
+</div>
+</section>
+
+<!-- SCALE -->
+<section class="block" id="scale">
+<div class="title">Scale</div>
+
+<div class="grid3">
+<div class="card">
+<h4>ICICI Bank</h4>
+<p>Built lending and digital product growth engines.</p>
+</div>
+
+<div class="card">
+<h4>Dozee</h4>
+<p>Led customer success operations and expansion.</p>
+</div>
+
+<div class="card">
+<h4>MedTrail</h4>
+<p>Worked on B2B SaaS product execution and adoption.</p>
 </div>
 </div>
 </section>
 
 <!-- CAREER -->
 <section class="block" id="career">
-<div class="title">Career Journey.</div>
+<div class="title">Career</div>
 
 <div class="grid3">
 <div class="card">
-<h4>ICICI Bank</h4>
-<p>Senior Product Manager leading lending and digital platform growth.</p>
+<h4>Senior PM</h4>
+<p>6+ years building scalable digital products.</p>
 </div>
 
 <div class="card">
-<h4>Product Leadership</h4>
-<p>Owned roadmap, stakeholders, execution and measurable business outcomes.</p>
+<h4>Leadership</h4>
+<p>Cross-functional execution across product, tech and business teams.</p>
 </div>
 
 <div class="card">
-<h4>IIT BHU</h4>
-<p>Integrated Dual Degree in Biochemical Engineering.</p>
+<h4>Education</h4>
+<p>IIT BHU • Integrated Dual Degree.</p>
+</div>
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section class="block" id="projects">
+<div class="title">Projects</div>
+
+<div class="grid3">
+<div class="card">
+<h4>Loan Against Securities</h4>
+<p>End-to-end lending product transformation.</p>
+</div>
+
+<div class="card">
+<h4>Growth Engine</h4>
+<p>Adoption and monetization improvement systems.</p>
+</div>
+
+<div class="card">
+<h4>Sentinel</h4>
+<p>AI decision-support system simplifying finance understanding.</p>
 </div>
 </div>
 </section>
 
 <!-- SKILLS -->
 <section class="block" id="skills">
-<div class="title">What I Bring.</div>
+<div class="title">Skills</div>
 
 <div class="grid3">
-<div class="card"><h4>Product Strategy</h4><p>Roadmaps, prioritization, growth planning.</p></div>
-<div class="card"><h4>Execution</h4><p>Cross-functional delivery, agile shipping.</p></div>
-<div class="card"><h4>Data + AI</h4><p>Analytics, APIs, automation, AI products.</p></div>
+<div class="card"><h4>Product Strategy</h4><p>Roadmaps, prioritization, GTM.</p></div>
+<div class="card"><h4>Analytics</h4><p>Funnels, growth metrics, insights.</p></div>
+<div class="card"><h4>APIs + AI</h4><p>Platforms, automation, integrations.</p></div>
 </div>
 </section>
 
 <!-- CONTACT -->
 <section class="block" id="contact">
-<div class="title">Let's Build Something Valuable.</div>
+<div class="title">Let's Build Something Valuable</div>
 
 <div class="actions">
-<a href="mailto:kethesrinagavijay@gmail.com" class="cta">EMAIL ME</a>
-<a href="resume.pdf" target="_blank" class="cta secondary">DOWNLOAD RESUME</a>
+<a href="mailto:kethesrinagavijay@gmail.com" class="cta">EMAIL</a>
+<a href="resume.pdf" target="_blank" class="cta secondary">RESUME</a>
 </div>
 </section>
 
 </div>
 
 <footer>
-© 2026 Sri Naga Vijay Kethe • Built on GitHub Pages
+© 2026 Sri Naga Vijay Kethe • GitHub Portfolio
 </footer>
 
 </body>
