@@ -26,6 +26,7 @@ body{
 font-family:Inter,Arial,sans-serif;
 background:var(--bg);
 color:var(--text);
+line-height:1.5;
 }
 
 a{
@@ -44,7 +45,7 @@ padding:0 20px;
 position:sticky;
 top:0;
 z-index:1000;
-background:rgba(6,7,11,.9);
+background:rgba(6,7,11,.92);
 backdrop-filter:blur(12px);
 border-bottom:1px solid rgba(255,255,255,.05);
 }
@@ -77,8 +78,8 @@ display:none;
 
 .menu a{
 font-size:14px;
-color:var(--muted);
 font-weight:700;
+color:var(--muted);
 padding:8px 0;
 }
 
@@ -103,7 +104,7 @@ color:#fff !important;
 
 /* HERO */
 .hero{
-padding:70px 0 45px;
+padding:72px 0 46px;
 display:grid;
 grid-template-columns:1.35fr .8fr;
 gap:28px;
@@ -113,8 +114,8 @@ align-items:center;
 .eyebrow{
 font-size:13px;
 letter-spacing:2px;
-color:var(--accent);
 font-weight:800;
+color:var(--accent);
 margin-bottom:16px;
 }
 
@@ -131,10 +132,9 @@ color:var(--accent);
 }
 
 .hero p{
-max-width:720px;
 font-size:22px;
-line-height:1.5;
 color:var(--muted);
+max-width:720px;
 margin-top:22px;
 }
 
@@ -204,8 +204,8 @@ margin-top:18px;
 
 .profile p{
 margin-top:8px;
-color:var(--muted);
 font-size:16px;
+color:var(--muted);
 }
 
 .tags{
@@ -224,7 +224,7 @@ color:#8ef0b0;
 font-size:13px;
 }
 
-/* SECTION */
+/* SECTIONS */
 section{
 padding:58px 0;
 }
@@ -232,8 +232,8 @@ padding:58px 0;
 .title{
 font-size:46px;
 font-weight:900;
-margin-bottom:22px;
 line-height:1.05;
+margin-bottom:22px;
 }
 
 .title span{
@@ -246,12 +246,18 @@ padding-left:18px;
 margin:24px 0;
 }
 
+.card h3{
+margin-bottom:12px;
+font-size:22px;
+}
+
 /* FOOTER */
 footer{
 padding:50px 0;
 text-align:center;
 color:var(--muted);
 border-top:1px solid rgba(255,255,255,.05);
+margin-top:20px;
 }
 
 /* MOBILE */
@@ -509,23 +515,29 @@ Contributed to roadmap execution, workflow optimization, enterprise adoption, an
 <!-- PROJECTS -->
 <section id="projects">
 <div class="eyebrow">PROJECTS</div>
-<div class="title">Building what's next. <span>Sentinel Labs.</span></div>
+<div class="title">Building products, solving problems, <span>exploring what’s next.</span></div>
 
 <div class="grid">
 
 <div class="card">
 <h3>Loan Against Securities</h3>
-<p class="muted">Reduced turnaround time from days to instant with API-led journeys and unified operations.</p>
+<p class="muted">
+Transformed a traditional lending journey into a faster digital experience through API-led workflows, eligibility automation, and unified operations.
+</p>
 </div>
 
 <div class="card">
 <h3>Growth Expansion Engine</h3>
-<p class="muted">Scaled adoption through eligibility expansion and funnel fixes.</p>
+<p class="muted">
+Built growth-focused product initiatives that improved customer adoption, conversion funnels, and monetization opportunities across lending journeys.
+</p>
 </div>
 
 <div class="card">
-<h3>Sentinel Labs</h3>
-<p class="muted">AI-powered decision-support platform simplifying financial understanding and automating structured responses.</p>
+<h3>Sentinel (Prototype)</h3>
+<p class="muted">
+Personal AI prototype exploring decision-support systems for simplifying complex financial products and automating guided customer responses.
+</p>
 </div>
 
 </div>
@@ -536,15 +548,14 @@ Contributed to roadmap execution, workflow optimization, enterprise adoption, an
 <div class="eyebrow">SKILLS</div>
 
 <div class="grid">
-
 <div class="card">Product Strategy</div>
 <div class="card">Growth</div>
 <div class="card">APIs</div>
 <div class="card">Analytics</div>
 <div class="card">Stakeholder Management</div>
 <div class="card">AI Products</div>
-
 </div>
+
 </section>
 
 <!-- CONTACT -->
