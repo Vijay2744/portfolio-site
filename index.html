@@ -180,20 +180,27 @@ color:var(--muted);
 line-height:1.6;
 }
 
-/* PROFILE */
+/* PROFILE CARD WITHOUT PHOTO */
 .profile{
 text-align:center;
+display:flex;
+flex-direction:column;
+justify-content:center;
+min-height:100%;
 }
 
-.profile img{
-width:210px;
-height:210px;
+.initials{
+width:140px;
+height:140px;
 border-radius:50%;
-object-fit:cover;
-object-position:30% 23%;
-border:4px solid var(--accent);
-display:block;
-margin:auto;
+margin:0 auto;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:48px;
+font-weight:900;
+background:linear-gradient(135deg,#1f2937,#22c55e);
+color:#fff;
 box-shadow:0 18px 35px rgba(34,197,94,.22);
 }
 
@@ -303,11 +310,6 @@ font-size:18px;
 grid-template-columns:1fr;
 }
 
-.profile img{
-width:180px;
-height:180px;
-}
-
 .title{
 font-size:34px;
 }
@@ -350,7 +352,7 @@ into simple digital experiences.
 </h1>
 
 <p>
-Senior Product Manager delivering growth through APIs, automation, customer journeys, and measurable business outcomes across lending and financial products.
+Senior Product Manager driving growth through APIs, automation, lending journeys and customer platforms across retail and NRI banking ecosystems.
 </p>
 
 <div class="actions">
@@ -361,8 +363,13 @@ Senior Product Manager delivering growth through APIs, automation, customer jour
 <div class="metrics">
 
 <div class="card">
-<div class="metric-num">₹500M</div>
-<div class="muted">Monthly Scale</div>
+<div class="metric-num">₹500M+</div>
+<div class="muted">Monthly Lending Scale</div>
+</div>
+
+<div class="card">
+<div class="metric-num">20L+</div>
+<div class="muted">NRI Customers Served Base</div>
 </div>
 
 <div class="card">
@@ -375,25 +382,20 @@ Senior Product Manager delivering growth through APIs, automation, customer jour
 <div class="muted">Customer Expansion</div>
 </div>
 
-<div class="card">
-<div class="metric-num">28%</div>
-<div class="muted">Failure Reduction</div>
-</div>
-
 </div>
 </div>
 
 <div class="card profile">
 
-<img src="profile.jpg" alt="Vijay Kethe">
+<div class="initials">VK</div>
 
 <h3>Sri Naga Vijay Kethe</h3>
 
 <p>Senior Product Manager • Fintech • AI Products</p>
 
 <div class="tags">
+<span class="tag">20L+ NRI Base</span>
 <span class="tag">₹500M Scale</span>
-<span class="tag">Growth</span>
 <span class="tag">Builder</span>
 </div>
 
@@ -423,58 +425,8 @@ Senior Product Manager delivering growth through APIs, automation, customer jour
 </div>
 
 <div class="card">
-<h3>Incremental Revenue</h3>
-<p class="muted">Unlocked ₹250M+ monthly opportunity through limit enhancements.</p>
-</div>
-
-</div>
-</section>
-
-<!-- STRATEGY -->
-<section id="strategy">
-<div class="eyebrow">STRATEGY</div>
-<div class="title">Product fundamentals I live by. <span>Not frameworks I quote.</span></div>
-
-<div class="grid">
-
-<div class="card">
-<h3>Quantify Before Solve</h3>
-<p class="muted">Prioritize using business impact, user pain, and funnel drop-offs.</p>
-</div>
-
-<div class="card">
-<h3>Evidence Over Opinion</h3>
-<p class="muted">Use data, customer behavior, and measurable outcomes.</p>
-</div>
-
-<div class="card">
-<h3>Ship, Measure, Decide</h3>
-<p class="muted">Fast launches, deep monitoring, quick iterations.</p>
-</div>
-
-</div>
-</section>
-
-<!-- SCALE -->
-<section id="scale">
-<div class="eyebrow">SCALE</div>
-<div class="title">Three companies. <span>One pattern of impact.</span></div>
-
-<div class="grid">
-
-<div class="card">
-<h3>ICICI Bank</h3>
-<p class="muted">Scaled lending platform and digital growth engines.</p>
-</div>
-
-<div class="card">
-<h3>Dozee</h3>
-<p class="muted">Led customer operations and service excellence at scale.</p>
-</div>
-
-<div class="card">
-<h3>MedTrail</h3>
-<p class="muted">Built SaaS workflows, roadmap execution, and adoption.</p>
+<h3>NRI Services Ownership</h3>
+<p class="muted">Currently managing PM responsibilities for NRI services platform serving 20 lakh+ customer base.</p>
 </div>
 
 </div>
@@ -490,22 +442,21 @@ Senior Product Manager delivering growth through APIs, automation, customer jour
 <div class="item">
 <h3>ICICI Bank — Senior Product Manager</h3>
 <p class="muted">
-Owned end-to-end Loan Against Securities, NRI digital banking services and Customer Service Platform. 
-Scaled LAS portfolio from ₹20M to ₹500M/month, delivered 370% revenue growth, 537% customer expansion, and launched instant lending journeys generating ₹250M+ monthly opportunity.
+Owned Loan Against Securities, Customer Service Platform and currently Product Manager for NRI Services serving 20 lakh+ customers. Scaled LAS portfolio from ₹20M to ₹500M+/month and delivered major growth outcomes.
 </p>
 </div>
 
 <div class="item">
 <h3>Dozee — Manager, Customer Success</h3>
 <p class="muted">
-Built and scaled an 8-member customer success team, improved client satisfaction by 15%, and reduced average issue resolution time by 30%.
+Built and scaled 8-member team, improved client satisfaction by 15%, reduced issue resolution time by 30%.
 </p>
 </div>
 
 <div class="item">
 <h3>MedTrail — Associate Product Manager</h3>
 <p class="muted">
-Contributed to roadmap execution, workflow optimization, enterprise adoption, and user-behavior led product improvements for a B2B SaaS healthcare platform.
+Roadmap execution, workflow optimization and enterprise product adoption.
 </p>
 </div>
 
@@ -522,40 +473,25 @@ Contributed to roadmap execution, workflow optimization, enterprise adoption, an
 <div class="card">
 <h3>Loan Against Securities</h3>
 <p class="muted">
-Transformed a traditional lending journey into a faster digital experience through API-led workflows, eligibility automation, and unified operations.
+Digital lending transformation through API-led workflows and unified operations.
 </p>
 </div>
 
 <div class="card">
-<h3>Growth Expansion Engine</h3>
+<h3>NRI Services Platform</h3>
 <p class="muted">
-Built growth-focused product initiatives that improved customer adoption, conversion funnels, and monetization opportunities across lending journeys.
+Currently driving product initiatives for NRI services across journeys, servicing and digital experience for 20 lakh+ users.
 </p>
 </div>
 
 <div class="card">
 <h3>Sentinel (Prototype)</h3>
 <p class="muted">
-Personal AI prototype exploring decision-support systems for simplifying complex financial products and automating guided customer responses.
+Personal AI prototype exploring decision-support systems for simplifying financial products and automating guided responses.
 </p>
 </div>
 
 </div>
-</section>
-
-<!-- SKILLS -->
-<section id="skills">
-<div class="eyebrow">SKILLS</div>
-
-<div class="grid">
-<div class="card">Product Strategy</div>
-<div class="card">Growth</div>
-<div class="card">APIs</div>
-<div class="card">Analytics</div>
-<div class="card">Stakeholder Management</div>
-<div class="card">AI Products</div>
-</div>
-
 </section>
 
 <!-- CONTACT -->
