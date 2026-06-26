@@ -3,170 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sri Naga Vijay Kethe — Senior Product Manager</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+    <title>Sri Naga Vijay Kethe | Enterprise AI & Fintech Product Leader</title>
     <style>
         :root {
-            --bg-dark: #030609;
-            --panel-bg: #0b0f17;
-            --border-color: #1e2633;
-            --text-primary: #f0f6fc;
-            --text-secondary: #8b949e;
-            --neon-blue: #38bdf8;
-            --neon-purple: #a855f7;
-            --font-sans: 'Inter', sans-serif;
-            --font-mono: 'Fira Code', monospace;
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-blue: #38bdf8;
+            --accent-green: #34d399;
+            --border-color: #334155;
         }
 
-        * { box-sizing: border-box; margin: 0; padding: 0; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
         body {
-            background-color: var(--bg-dark);
-            color: var(--text-primary);
-            font-family: var(--font-sans);
+            background-color: var(--bg-primary);
+            color: var(--text-main);
             line-height: 1.6;
-            padding: 3rem 1.5rem;
+            padding: 2rem 1rem;
         }
 
-        .container { max-width: 900px; margin: 0 auto; }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
 
-        /* System Header Inspired by Console Logs */
-        .terminal-header {
-            font-family: var(--font-mono);
-            font-size: 0.75rem;
-            color: var(--text-secondary);
-            display: flex;
-            justify-content: space-between;
+        header {
             border-bottom: 1px solid var(--border-color);
-            padding-bottom: 0.5rem;
+            padding-bottom: 2rem;
             margin-bottom: 2.5rem;
         }
 
-        header h1 {
+        .header-grid {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        h1 {
             font-size: 2.5rem;
-            font-weight: 700;
-            letter-spacing: -0.02em;
+            font-weight: 800;
+            letter-spacing: -0.025em;
             margin-bottom: 0.5rem;
+            background: linear-gradient(to right, #ffffff, var(--text-muted));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        header p { color: var(--text-secondary); font-size: 1.1rem; margin-bottom: 1.5rem; }
+        .tagline {
+            color: var(--accent-blue);
+            font-size: 1.15rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
 
-        /* Quick Links Action UI */
-        .nav-links { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3rem; }
-        .nav-links a {
-            font-family: var(--font-mono);
-            font-size: 0.8rem;
-            color: var(--text-primary);
+        .contact-info {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.35rem;
+        }
+
+        .contact-info a {
+            color: var(--text-main);
             text-decoration: none;
-            padding: 0.4rem 0.8rem;
-            background: #0d131f;
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            transition: all 0.2s ease;
-        }
-        .nav-links a:hover {
-            border-color: var(--neon-blue);
-            background: rgba(56, 189, 248, 0.04);
+            transition: color 0.2s;
         }
 
-        /* Full Width Impact Grid */
-        .impact-grid {
+        .contact-info a:hover {
+            color: var(--accent-blue);
+        }
+
+        /* Hero Metrics Grid */
+        .metrics-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 1rem;
-            margin-bottom: 3.5rem;
+            margin-bottom: 3rem;
         }
 
         .metric-card {
-            background: var(--panel-bg);
+            background-color: var(--bg-secondary);
             border: 1px solid var(--border-color);
             border-radius: 8px;
             padding: 1.5rem;
-            transition: transform 0.2s ease, border-color 0.2s ease;
+            text-align: center;
         }
-        .metric-card:hover {
-            border-color: var(--neon-blue);
-            transform: translateY(-2px);
-        }
-        .metric-title { font-size: 2.25rem; font-weight: 700; color: var(--neon-blue); margin-bottom: 0.25rem; }
 
-        /* Section Headings */
-        .section-label {
-            font-family: var(--font-mono);
-            font-size: 0.8rem;
-            color: var(--neon-purple);
+        .metric-value {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--accent-green);
+            margin-bottom: 0.25rem;
+        }
+
+        .metric-label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
             text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
+            letter-spacing: 0.05em;
         }
-        .section-label::after { content: ''; flex-grow: 1; height: 1px; background: var(--border-color); }
 
-        /* Interactive Showcase Blueprint (Abhilash Component Reference) */
-        .showcase-container {
-            background: var(--panel-bg);
+        /* Section Layouts */
+        section {
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            border-left: 4px solid var(--accent-blue);
+            padding-left: 0.75rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.01em;
+        }
+
+        .card {
+            background-color: var(--bg-secondary);
             border: 1px solid var(--border-color);
             border-radius: 8px;
-            margin-bottom: 3.5rem;
-            overflow: hidden;
-        }
-        .tabs { display: flex; background: #090d14; border-bottom: 1px solid var(--border-color); }
-        .tab-btn {
-            font-family: var(--font-mono);
-            font-size: 0.75rem;
-            padding: 0.75rem 1.2rem;
-            background: transparent;
-            border: none;
-            color: var(--text-secondary);
-            cursor: pointer;
-            border-right: 1px solid var(--border-color);
-            transition: all 0.2s;
-        }
-        .tab-btn.active { background: var(--panel-bg); color: var(--neon-blue); font-weight: 500; }
-        
-        .tab-content { padding: 1.75rem; display: none; }
-        .tab-content.active { display: block; }
-
-        /* Metadata Block Pattern */
-        .meta-strip {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            gap: 1rem;
-            background: rgba(255, 255, 255, 0.02);
-            padding: 1rem;
-            border-radius: 6px;
-            margin-bottom: 1.25rem;
-            border: 1px solid rgba(255, 255, 255, 0.04);
-            font-size: 0.85rem;
-        }
-        .meta-item span { display: block; font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-secondary); }
-        .meta-item strong { color: var(--text-primary); font-weight: 500; }
-
-        .lesson-box {
-            margin-top: 1.5rem;
-            padding: 1rem;
-            background: rgba(168, 85, 247, 0.03);
-            border-left: 2px solid var(--neon-purple);
-            border-radius: 0 4px 4px 0;
-            font-size: 0.9rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
         }
 
-        /* Classic Timeline */
-        .timeline-item { margin-bottom: 2.5rem; }
-        .timeline-title-row { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5rem; }
-        .company { font-size: 1.25rem; font-weight: 600; }
-        .duration { font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-secondary); }
-        ul { padding-left: 1.20rem; color: var(--text-secondary); font-size: 0.95rem; }
-        li { margin-bottom: 0.5rem; }
-        li strong { color: var(--text-primary); }
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .company-name {
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .job-title {
+            color: var(--text-muted);
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .date-location {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+            text-align: right;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        li {
+            margin-bottom: 0.75rem;
+            position: relative;
+            padding-left: 1.25rem;
+            color: var(--text-muted);
+        }
+
+        li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--accent-blue);
+            font-weight: bold;
+        }
+
+        li strong {
+            color: var(--text-main);
+        }
+
+        /* Skills Tags */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            background-color: #334155;
+            color: var(--text-main);
+            padding: 0.35rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.875rem;
+            border: 1px solid var(--border-color);
+        }
 
         @media (max-width: 600px) {
-            body { padding: 1.5rem 1rem; }
-            .timeline-title-row { flex-direction: column; }
+            .date-location {
+                text-align: left;
+                margin-top: 0.25rem;
+            }
         }
     </style>
 </head>
@@ -174,155 +211,154 @@
 
     <div class="container">
         
-        <!-- System Status Bar -->
-        <div class="terminal-header">
-            <span>SYS_INIT: OK // LEVEL: SENIOR_PM</span>
-            <span>STACK_VER: 2026.2</span>
-        </div>
-
-        <!-- Header -->
         <header>
-            <h1>Sri Naga Vijay Kethe</h1>
-            <p>Senior Product Manager — Transforming Complex Frameworks into High-Scale Digital Platforms</p>
-            <div class="nav-links">
-                <a href="#" target="_blank">view_resume.pdf</a>
-                <a href="https://linkedin.com/in/srinagavijaykethe" target="_blank">linkedin_profile</a>
-                <a href="https://github.com/vijay2744" target="_blank">github_repo</a>
-                <a href="mailto:your-email@example.com">secure_contact</a>
+            <div class="header-grid">
+                <div>
+                    <h1>Sri Naga Vijay Kethe</h1>
+                    <div class="tagline">Senior Product Manager | Enterprise AI & Digital Lending Platforms</div>
+                </div>
+                <div class="contact-info">
+                    <div>📧 <a href="mailto:kethesrinagavijay@gmail.com">kethesrinagavijay@gmail.com</a></div>
+                    <div>📱 +91 9618002400</div>
+                    <div>🔗 <a href="https://linkedin.com/in/sri-naga-vijay-kethe-9a5a89125/" target="_blank">LinkedIn Profile</a></div>
+                    <div>📍 Hyderabad, India</div>
+                </div>
             </div>
         </header>
 
-        <!-- Section 1: Top-Line Core Metrics -->
-        <div class="section-label">01 // High-Leverage Metrics</div>
-        <section class="impact-grid">
-            <div class="metric-card">
-                <div class="metric-title">₹500M+</div>
-                <div class="muted">Monthly Lending Scale</div>
-            </div>
-            <div class="metric-card">
-                <div class="metric-title">20L+</div>
-                <div class="muted">Global Customers Served</div>
-            </div>
-            <div class="metric-card">
-                <div class="metric-title">370%</div>
-                <div class="muted">Platform Revenue Growth</div>
-            </div>
-            <div class="metric-card">
-                <div class="metric-title">Instant</div>
-                <div class="muted">Onboarding Loop (TTV)</div>
-            </div>
-        </section>
-
-        <!-- Section 2: Core Initiative Focus Showcase (Interactive Tab Component) -->
-        <div class="section-label">02 // Platform Core Deep Dives</div>
-        <section class="showcase-container">
-            <div class="tabs">
-                <button class="tab-btn active" onclick="openTab(event, 'lending')">lending_architecture.sys</button>
-                <button class="tab-btn" onclick="openTab(event, 'nri')">global_nri_platform.sys</button>
-                <button class="tab-btn" onclick="openTab(event, 'sentinel')">sentinel_ai_lab.sys</button>
-            </div>
-
-            <!-- Tab: Lending Architecture -->
-            <div id="lending" class="tab-content active">
-                <div class="meta-strip">
-                    <div class="meta-item"><span>INITIATIVE</span><strong>Digital Lending Scale</strong></div>
-                    <div class="meta-item"><span>KPI TARGET</span><strong>25x Scale Expansion</strong></div>
-                    <div class="meta-item"><span>ARCHITECTURE</span><strong>API-Driven Journeys</strong></div>
+        <!-- Dynamic Impact Analytics -->
+        <section>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-value">₹500M/Mo</div>
+                    <div class="metric-label">Peak Portfolio Scaled</div>
                 </div>
-                <p class="muted" style="margin-bottom: 1rem;">
-                    Re-engineered structural loan onboarding and decision execution matrix models. Managed cross-functional alignment to transition traditional, high-touch mechanisms into low-latency automation rails.
-                </p>
-                <ul>
-                    <li>Scaled transactional volume capacity safely from <strong>₹20M/month to ₹500M+/month</strong>.</li>
-                    <li>Reduced pipeline friction profiles, leading to a verified <strong>28% drop in failure rates</strong>.</li>
-                </ul>
-                <div class="lesson-box">
-                    <span style="color: var(--neon-purple); font-family: var(--font-mono); font-size: 0.75rem; display: block; margin-bottom: 0.2rem;">[LESSON LEARNED]</span>
-                    In enterprise transaction networks, optimization of error routing pipelines scales volume capacity faster than raw user funnel design.
+                <div class="metric-card">
+                    <div class="metric-value">370% YoY</div>
+                    <div class="metric-label">Revenue Optimization Growth</div>
                 </div>
-            </div>
-
-            <!-- Tab: Global NRI Platform -->
-            <div id="nri" class="tab-content">
-                <div class="meta-strip">
-                    <div class="meta-item"><span>INITIATIVE</span><strong>Cross-Border Platforms</strong></div>
-                    <div class="meta-item"><span>USER ARCH</span><strong>20 Lakh+ Active Nodes</strong></div>
-                    <div class="meta-item"><span>COMPLIANCE</span><strong>FATCA / FEMA Modules</strong></div>
+                <div class="metric-card">
+                    <div class="metric-value">99%+</div>
+                    <div class="metric-label">API Architecture Uptime</div>
                 </div>
-                <p class="muted" style="margin-bottom: 1rem;">
-                    Abstracted complex international banking systems and regulatory structures into a modular, product-led user experience layer optimized for global customer retention.
-                </p>
-                <ul>
-                    <li>Compressed manual processing timelines from <strong>4-5 days down to near-instant digital cycles</strong>.</li>
-                    <li>Unlocked over <strong>₹250M+ in added monthly platform opportunities</strong> through embedded wealth systems.</li>
-                </ul>
-                <div class="lesson-box">
-                    <span style="color: var(--neon-purple); font-family: var(--font-mono); font-size: 0.75rem; display: block; margin-bottom: 0.2rem;">[LESSON LEARNED]</span>
-                    Minimizing localized compliance loops directly compresses Time-to-Value (TTV), halting checkout funnel drop-offs for global users.
-                </div>
-            </div>
-
-            <!-- Tab: Sentinel Lab -->
-            <div id="sentinel" class="tab-content">
-                <div class="meta-strip">
-                    <div class="meta-item"><span>LAB PROJECT</span><strong>Sentinel (AI Prototype)</strong></div>
-                    <div class="meta-item"><span>CORE FRAME</span><strong>Domain RAG Architecture</strong></div>
-                    <div class="meta-item"><span>TARGET OPT</span><strong>Zero Human-In-Loop</strong></div>
-                </div>
-                <p class="muted">
-                    Investigating decision-support systems to safely simplify multi-tenant financial definitions and automate complex international documentation indexing.
-                </p>
-                <div class="lesson-box" style="background: rgba(56, 189, 248, 0.02); border-left-color: var(--neon-blue);">
-                    <span style="color: var(--neon-blue); font-family: var(--font-mono); font-size: 0.75rem; display: block; margin-bottom: 0.2rem;">[RESEARCH FOCUS]</span>
-                    Evaluating automated retrieval guardrails to eliminate context window leakages within sensitive platform communication flows.
+                <div class="metric-card">
+                    <div class="metric-value">Instant</div>
+                    <div class="metric-label">TAT Workflow Reduction</div>
                 </div>
             </div>
         </section>
 
-        <!-- Section 3: History Timeline -->
-        <div class="section-label">03 // Production Milestones</div>
-        <section style="margin-bottom: 3.5rem;">
-            <div class="timeline-item">
-                <div class="timeline-title-row">
-                    <span class="company">ICICI Bank — Senior Product Manager</span>
-                    <span class="duration">2023 - PRESENT</span>
+        <!-- Core Flagship Asset -->
+        <section id="sentinel">
+            <h2>Featured AI Initiative</h2>
+            <div class="card" style="border-color: var(--accent-blue);">
+                <div class="card-header">
+                    <div>
+                        <span class="company-name" style="color: var(--accent-blue);">Sentinel Core Engine</span>
+                        <div class="job-title">AI-Powered Enterprise Decision-Support Platform</div>
+                    </div>
+                </div>
+                <p style="color: var(--text-muted); margin-bottom: 1rem;">
+                    Middleware architecture combining asynchronous workflow orchestration, policy intelligence models, and human oversight components to transform fragmented data points into compliant, straight-through enterprise executions.
+                </p>
+                <div class="skills-container">
+                    <span class="skill-tag">FastAPI</span>
+                    <span class="skill-tag">Decision Engines</span>
+                    <span class="skill-tag">Asynchronous Routing</span>
+                    <span class="skill-tag">Policy Intelligence</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Track -->
+        <section id="experience">
+            <h2>Professional Experience</h2>
+
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <div class="company-name">ICICI Bank</div>
+                        <div class="job-title">Chief Manager - Digital Channels & Partnerships (Senior Product Manager)</div>
+                    </div>
+                    <div class="date-location">
+                        <div>Mar 2022 - Present</div>
+                        <div>Hyderabad, India</div>
+                    </div>
                 </div>
                 <ul>
-                    <li>Led digital integration layers across Loan Against Securities and cross-border multi-currency services.</li>
-                    <li>Drove <strong>370% platform revenue surges</strong> and <strong>537% overall customer expansion parameters</strong>.</li>
+                    <li><strong>Scaled the Loan Against Securities (LAS) portfolio</strong> from ₹20M to ₹500M per month by implementing an instant digital lending journey that transformed a 4-5 day manual verification flow into a real-time, API-enabled process[cite: 1, 2].</li>
+                    <li><strong>Drove business growth mechanics</strong> generating a 370% increase in revenue yields alongside a 537% expansion of the active retail user footprint using micro-segment targeting capabilities[cite: 1, 2].</li>
+                    <li><strong>Launched zero-to-one digital lending loops</strong> across multiple channels, introducing automated limit enhancement journeys to unlock ₹250M+ in incremental monthly volume runs[cite: 1, 2].</li>
+                    <li><strong>Unified fragmented data architectures</strong> across NSDL, CDSL, and CAMS registries to support both internal and external demat accounts under a single transaction pattern[cite: 2].</li>
+                    <li><strong>Modernized credit evaluation decision models</strong> with rule-based systems to isolate unapproved assets and execute automated lien structures with a 28% reduction in runtime failures[cite: 1, 2].</li>
                 </ul>
             </div>
 
-            <div class="timeline-item">
-                <div class="timeline-meta timeline-title-row">
-                    <span class="company">Dozee — Product Manager</span>
-                    <span class="duration">2021 - 2023</span>
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <div class="company-name">Dozee</div>
+                        <div class="job-title">Manager - Customer Success</div>
+                    </div>
+                    <div class="date-location">
+                        <div>Aug 2021 - Mar 2022</div>
+                        <div>Hyderabad, India</div>
+                    </div>
                 </div>
                 <ul>
-                    <li>Managed engineering sprints, telemetry data architectures, and hardware/software roadmap delivery syncs.</li>
+                    <li><strong>Structured enterprise adoption tracks</strong> across provider healthcare systems, managing an 8-member core operational delivery squad[cite: 1].</li>
+                    <li><strong>Improved customer evaluation parameters</strong> by 15% through unified tracking tools and strict platform usage metrics[cite: 1].</li>
+                    <li><strong>Reduced support turnaround times by 30%</strong> by engineering a technical escalation loop across engineering and product maintenance groups[cite: 1].</li>
                 </ul>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <div class="company-name">MedTrail</div>
+                        <div class="job-title">Associate Product Manager</div>
+                    </div>
+                    <div class="date-location">
+                        <div>Aug 2019 - Jul 2021</div>
+                        <div>Delhi, India</div>
+                    </div>
+                </div>
+                <ul>
+                    <li><strong>Owned feature lifecycle priorities</strong> for a B2B SaaS platform tracking provider transaction lifecycles[cite: 1].</li>
+                    <li><strong>Analyzed usage metrics and user behaviors</strong> to refine user onboarding pipelines and reduce platform friction points[cite: 1].</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Academic Foundation -->
+        <section id="education">
+            <h2>Academic Foundation</h2>
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <div class="company-name">IIT BHU (Varanasi)</div>
+                        <div class="job-title">Integrated Dual Degree, Biochemical Engineering</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Competencies -->
+        <section id="skills">
+            <h2>Core Competencies</h2>
+            <div class="skills-container">
+                <span class="skill-tag">API-First Product Design</span>
+                <span class="skill-tag">Digital Lending Workflows</span>
+                <span class="skill-tag">Business Rule Engines (BRE)</span>
+                <span class="skill-tag">Process Automation Architecture</span>
+                <span class="skill-tag">System Stability Optimization</span>
+                <span class="skill-tag">Fintech Integration Layers</span>
+                <span class="skill-tag">Data-Driven Roadmapping</span>
+                <span class="skill-tag">Cross-Functional Team Leadership</span>
             </div>
         </section>
 
     </div>
 
-    <!-- Tab Engine Logic script -->
-    <script>
-        function openTab(evt, tabId) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tab-content");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-                tabcontent[i].classList.remove("active");
-            }
-            tablinks = document.getElementsByClassName("tab-btn");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].classList.remove("active");
-            }
-            document.getElementById(tabId).style.display = "block";
-            document.getElementById(tabId).classList.add("active");
-            evt.currentTarget.classList.add("active");
-        }
-    </script>
 </body>
 </html>
