@@ -4,281 +4,169 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sri Naga Vijay Kethe — Senior Product Manager</title>
-    <!-- Premium Font Link -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            --bg-color: #080b10;
-            --card-bg: rgba(17, 22, 31, 0.6);
-            --border-color: rgba(43, 53, 72, 0.5);
-            --text-main: #e2e8f0;
-            --text-muted: #8a99ad;
-            --accent-glow: #38bdf8;
-            --accent-gradient: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%);
-            --font-main: 'Plus Jakarta Sans', sans-serif;
-            --font-code: 'JetBrains Mono', monospace;
+            --bg-dark: #030609;
+            --panel-bg: #0b0f17;
+            --border-color: #1e2633;
+            --text-primary: #f0f6fc;
+            --text-secondary: #8b949e;
+            --neon-blue: #38bdf8;
+            --neon-purple: #a855f7;
+            --font-sans: 'Inter', sans-serif;
+            --font-mono: 'Fira Code', monospace;
         }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
+        * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
-            background-color: var(--bg-color);
-            background-image: 
-                radial-gradient(circle at 5% 10%, rgba(56, 189, 248, 0.04) 0%, transparent 35%),
-                radial-gradient(circle at 95% 40%, rgba(129, 140, 248, 0.04) 0%, transparent 45%);
-            color: var(--text-main);
-            font-family: var(--font-main);
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            font-family: var(--font-sans);
             line-height: 1.6;
-            padding: 4rem 2rem;
-            letter-spacing: -0.01em;
+            padding: 3rem 1.5rem;
         }
 
-        .container {
-            max-width: 840px;
-            margin: 0 auto;
-        }
+        .container { max-width: 900px; margin: 0 auto; }
 
-        /* Top Bar Info */
-        .system-status {
-            font-family: var(--font-code);
+        /* System Header Inspired by Console Logs */
+        .terminal-header {
+            font-family: var(--font-mono);
             font-size: 0.75rem;
-            color: var(--text-muted);
+            color: var(--text-secondary);
             display: flex;
             justify-content: space-between;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
             margin-bottom: 2.5rem;
-            padding-bottom: 0.75rem;
-            border-bottom: 1px dashed var(--border-color);
         }
 
-        header {
-            margin-bottom: 3.5rem;
-        }
-
-        h1 {
-            font-size: 2.75rem;
+        header h1 {
+            font-size: 2.5rem;
             font-weight: 700;
-            letter-spacing: -0.03em;
+            letter-spacing: -0.02em;
             margin-bottom: 0.5rem;
-            background: linear-gradient(to right, #ffffff 40%, #a5b4fc 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
         }
 
-        .section-title {
-            font-size: 0.85rem;
-            font-family: var(--font-code);
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            color: #818cf8;
-            margin-top: 4rem;
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
+        header p { color: var(--text-secondary); font-size: 1.1rem; margin-bottom: 1.5rem; }
 
-        .section-title::after {
-            content: '';
-            flex-grow: 1;
-            height: 1px;
-            background: linear-gradient(to right, rgba(129, 140, 248, 0.3), transparent);
-        }
-
-        /* Hero Performance Cards */
-        .hero-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 1rem;
-            margin-bottom: 3rem;
-        }
-
-        .card {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 1.5rem;
-            position: relative;
-            overflow: hidden;
-            backdrop-filter: blur(12px);
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .card:hover {
-            border-color: rgba(56, 189, 248, 0.4);
-            transform: translateY(-2px);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4), 0 0 1px rgba(56, 189, 248, 0.2);
-        }
-
-        .card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 2px;
-            background: transparent;
-            transition: background 0.3s ease;
-        }
-
-        .card:hover::before {
-            background: var(--accent-gradient);
-        }
-
-        .metric-num {
-            font-size: 2.25rem;
-            font-weight: 700;
-            background: var(--accent-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            letter-spacing: -0.04em;
-            margin-bottom: 0.25rem;
-        }
-
-        .muted {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-        }
-
-        /* Interactive Timeline Elements */
-        .timeline {
-            position: relative;
-            padding-left: 1.5rem;
-            border-left: 1px solid var(--border-color);
-        }
-
-        .timeline-item {
-            position: relative;
-            margin-bottom: 3rem;
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: calc(-1.5rem - 4px);
-            top: 6px;
-            width: 7px;
-            height: 7px;
-            border-radius: 50%;
-            background-color: var(--bg-color);
-            border: 2px solid var(--text-muted);
-            transition: all 0.3s ease;
-        }
-
-        .timeline-item:hover::before {
-            border-color: var(--accent-glow);
-            background-color: var(--accent-glow);
-            box-shadow: 0 0 8px var(--accent-glow);
-        }
-
-        .timeline-meta {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 0.75rem;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .company-title {
-            font-size: 1.35rem;
-            font-weight: 600;
-            color: #ffffff;
-        }
-
-        .role-badge {
-            font-family: var(--font-code);
-            font-size: 0.75rem;
-            background-color: rgba(129, 140, 248, 0.1);
-            color: #a5b4fc;
-            padding: 2px 8px;
-            border-radius: 4px;
-            border: 1px solid rgba(129, 140, 248, 0.2);
-        }
-
-        ul {
-            padding-left: 1.25rem;
-            margin-top: 0.75rem;
-        }
-
-        li {
-            margin-bottom: 0.5rem;
-            color: var(--text-main);
-        }
-
-        strong {
-            color: #ffffff;
-            font-weight: 500;
-        }
-
-        /* Tech Feature Matrix Pill Tags */
-        .tag-matrix {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 1rem;
-        }
-
-        .tag {
-            font-family: var(--font-code);
-            font-size: 0.7rem;
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.07);
-            color: var(--text-muted);
-            padding: 2px 8px;
-            border-radius: 4px;
-        }
-
-        /* Grid Framework for Aggregated Section */
-        .impact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-            gap: 1rem;
-        }
-
-        .impact-card h3 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #ffffff;
-            margin-bottom: 0.25rem;
-        }
-
-        /* Link Infrastructure UI button */
-        .links-container {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        a.btn {
-            font-family: var(--font-code);
+        /* Quick Links Action UI */
+        .nav-links { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3rem; }
+        .nav-links a {
+            font-family: var(--font-mono);
             font-size: 0.8rem;
-            color: var(--text-main);
+            color: var(--text-primary);
             text-decoration: none;
-            padding: 0.5rem 1rem;
-            background: rgba(255, 255, 255, 0.02);
+            padding: 0.4rem 0.8rem;
+            background: #0d131f;
             border: 1px solid var(--border-color);
             border-radius: 6px;
             transition: all 0.2s ease;
-            display: inline-flex;
+        }
+        .nav-links a:hover {
+            border-color: var(--neon-blue);
+            background: rgba(56, 189, 248, 0.04);
+        }
+
+        /* Full Width Impact Grid */
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+            gap: 1rem;
+            margin-bottom: 3.5rem;
+        }
+
+        .metric-card {
+            background: var(--panel-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+        .metric-card:hover {
+            border-color: var(--neon-blue);
+            transform: translateY(-2px);
+        }
+        .metric-title { font-size: 2.25rem; font-weight: 700; color: var(--neon-blue); margin-bottom: 0.25rem; }
+
+        /* Section Headings */
+        .section-label {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--neon-purple);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1.5rem;
+            display: flex;
             align-items: center;
             gap: 0.5rem;
         }
+        .section-label::after { content: ''; flex-grow: 1; height: 1px; background: var(--border-color); }
 
-        a.btn:hover {
-            background: rgba(56, 189, 248, 0.05);
-            border-color: var(--accent-glow);
-            color: #ffffff;
-            transform: translateY(-1px);
+        /* Interactive Showcase Blueprint (Abhilash Component Reference) */
+        .showcase-container {
+            background: var(--panel-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            margin-bottom: 3.5rem;
+            overflow: hidden;
+        }
+        .tabs { display: flex; background: #090d14; border-bottom: 1px solid var(--border-color); }
+        .tab-btn {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            padding: 0.75rem 1.2rem;
+            background: transparent;
+            border: none;
+            color: var(--text-secondary);
+            cursor: pointer;
+            border-right: 1px solid var(--border-color);
+            transition: all 0.2s;
+        }
+        .tab-btn.active { background: var(--panel-bg); color: var(--neon-blue); font-weight: 500; }
+        
+        .tab-content { padding: 1.75rem; display: none; }
+        .tab-content.active { display: block; }
+
+        /* Metadata Block Pattern */
+        .meta-strip {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 1rem;
+            background: rgba(255, 255, 255, 0.02);
+            padding: 1rem;
+            border-radius: 6px;
+            margin-bottom: 1.25rem;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            font-size: 0.85rem;
+        }
+        .meta-item span { display: block; font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-secondary); }
+        .meta-item strong { color: var(--text-primary); font-weight: 500; }
+
+        .lesson-box {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background: rgba(168, 85, 247, 0.03);
+            border-left: 2px solid var(--neon-purple);
+            border-radius: 0 4px 4px 0;
+            font-size: 0.9rem;
         }
 
+        /* Classic Timeline */
+        .timeline-item { margin-bottom: 2.5rem; }
+        .timeline-title-row { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5rem; }
+        .company { font-size: 1.25rem; font-weight: 600; }
+        .duration { font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-secondary); }
+        ul { padding-left: 1.20rem; color: var(--text-secondary); font-size: 0.95rem; }
+        li { margin-bottom: 0.5rem; }
+        li strong { color: var(--text-primary); }
+
         @media (max-width: 600px) {
-            body { padding: 2rem 1rem; }
-            h1 { font-size: 2rem; }
-            .timeline-meta { flex-direction: column; align-items: flex-start; gap: 0.25rem; }
+            body { padding: 1.5rem 1rem; }
+            .timeline-title-row { flex-direction: column; }
         }
     </style>
 </head>
@@ -286,143 +174,155 @@
 
     <div class="container">
         
-        <!-- System Identifier Bar -->
-        <div class="system-status">
-            <span>LOC: HYDERABAD, IN</span>
-            <span>ROLE: SR. PRODUCT MANAGER</span>
-            <span>STATUS: ACTIVE PROTOTYPING</span>
+        <!-- System Status Bar -->
+        <div class="terminal-header">
+            <span>SYS_INIT: OK // LEVEL: SENIOR_PM</span>
+            <span>STACK_VER: 2026.2</span>
         </div>
-        
-        <!-- Header Section -->
+
+        <!-- Header -->
         <header>
             <h1>Sri Naga Vijay Kethe</h1>
-            <p class="muted" style="font-size: 1.1rem; margin-bottom: 1.75rem; max-width: 650px;">Transforming complex financial frameworks and legacy transaction rails into high-scale, product-led B2B software platforms.</p>
-            <div class="links-container">
-                <a class="btn" href="#" target="_blank"><span>📄</span> Resume.pdf</a>
-                <a class="btn" href="https://linkedin.com/in/srinagavijaykethe" target="_blank"><span>🔗</span> LinkedIn</a>
-                <a class="btn" href="https://github.com/vijay2744" target="_blank"><span>💻</span> GitHub</a>
-                <a class="btn" href="mailto:your-email@example.com"><span>✉️</span> Signal</a>
+            <p>Senior Product Manager — Transforming Complex Frameworks into High-Scale Digital Platforms</p>
+            <div class="nav-links">
+                <a href="#" target="_blank">view_resume.pdf</a>
+                <a href="https://linkedin.com/in/srinagavijaykethe" target="_blank">linkedin_profile</a>
+                <a href="https://github.com/vijay2744" target="_blank">github_repo</a>
+                <a href="mailto:your-email@example.com">secure_contact</a>
             </div>
         </header>
 
-        <!-- Core Philosophy Segment -->
-        <div class="card" style="margin-bottom: 3rem; padding: 1.25rem 1.5rem;">
-            <div style="font-family: var(--font-code); font-size: 0.75rem; color: #818cf8; margin-bottom: 0.25rem;">// OPERATING PRINCIPLE</div>
-            <div class="muted" style="font-size: 0.95rem; color: var(--text-main);">Quantify Before Solve • Evidence Over Opinion • Ship, Measure, Decide</div>
-        </div>
-
-        <!-- Section: Key Metrics -->
-        <div class="section-title">01 / Core Performance Indicators</div>
-        <section class="hero-grid">
-            <div class="card">
-                <div class="metric-num">₹500M+</div>
+        <!-- Section 1: Top-Line Core Metrics -->
+        <div class="section-label">01 // High-Leverage Metrics</div>
+        <section class="impact-grid">
+            <div class="metric-card">
+                <div class="metric-title">₹500M+</div>
                 <div class="muted">Monthly Lending Scale</div>
             </div>
-            <div class="card">
-                <div class="metric-num">20L+</div>
+            <div class="metric-card">
+                <div class="metric-title">20L+</div>
                 <div class="muted">Global Customers Served</div>
             </div>
-            <div class="card">
-                <div class="metric-num">370%</div>
+            <div class="metric-card">
+                <div class="metric-title">370%</div>
                 <div class="muted">Platform Revenue Growth</div>
             </div>
-            <div class="card">
-                <div class="metric-num">Instant</div>
-                <div class="muted">Time-to-Value (TTV) Loop</div>
+            <div class="metric-card">
+                <div class="metric-title">Instant</div>
+                <div class="muted">Onboarding Loop (TTV)</div>
             </div>
         </section>
 
-        <!-- Section: Timeline Work Experience -->
-        <div class="section-title">02 / Production Track Record</div>
-        <section class="timeline">
-            
-            <div class="timeline-item">
-                <div class="timeline-meta">
-                    <span class="company-title">ICICI Bank</span>
-                    <span class="role-badge">Senior Product Manager (Global NRI Platforms)</span>
+        <!-- Section 2: Core Initiative Focus Showcase (Interactive Tab Component) -->
+        <div class="section-label">02 // Platform Core Deep Dives</div>
+        <section class="showcase-container">
+            <div class="tabs">
+                <button class="tab-btn active" onclick="openTab(event, 'lending')">lending_architecture.sys</button>
+                <button class="tab-btn" onclick="openTab(event, 'nri')">global_nri_platform.sys</button>
+                <button class="tab-btn" onclick="openTab(event, 'sentinel')">sentinel_ai_lab.sys</button>
+            </div>
+
+            <!-- Tab: Lending Architecture -->
+            <div id="lending" class="tab-content active">
+                <div class="meta-strip">
+                    <div class="meta-item"><span>INITIATIVE</span><strong>Digital Lending Scale</strong></div>
+                    <div class="meta-item"><span>KPI TARGET</span><strong>25x Scale Expansion</strong></div>
+                    <div class="meta-item"><span>ARCHITECTURE</span><strong>API-Driven Journeys</strong></div>
                 </div>
-                <p class="muted" style="margin-bottom: 0.75rem;">
-                    Core product owner leading the translation of legacy, siloed international banking workflows into an automated, high-throughput digital platform layer.
+                <p class="muted" style="margin-bottom: 1rem;">
+                    Re-engineered structural loan onboarding and decision execution matrix models. Managed cross-functional alignment to transition traditional, high-touch mechanisms into low-latency automation rails.
                 </p>
-                <ul class="muted">
-                    <li><strong>Funnel Engineering (TTV):</strong> Architected a fully digital cross-border onboarding engine, compressing Time-to-Value (TTV) from 4–5 days to instant account activation, completely erasing core activation drop-offs.</li>
-                    <li><strong>API Integration Rails:</strong> Redesigned core remittance routing paths using robust high-frequency API pipelines, reducing system-wide transaction failure profiles by 28%.</li>
-                    <li><strong>Platform Multi-Tenancy:</strong> Abstracted multi-jurisdictional compliance architectures (FATCA, FEMA) into a modular, automated rule layer, eliminating compliance friction for users across global regions.</li>
-                    <li><strong>Ecosystem Cross-Sells:</strong> Structured cross-functional frameworks integrating wealth management (Trading, Demat) into the core portal, scaling user accounts by 537% and unlocking an added ₹250M+ monthly volume capacity.</li>
+                <ul>
+                    <li>Scaled transactional volume capacity safely from <strong>₹20M/month to ₹500M+/month</strong>.</li>
+                    <li>Reduced pipeline friction profiles, leading to a verified <strong>28% drop in failure rates</strong>.</li>
                 </ul>
-                <div class="tag-matrix">
-                    <span class="tag">API Integration</span><span class="tag">PLG Funnels</span><span class="tag">Cross-Border Rails</span><span class="tag">Scale Architecture</span>
+                <div class="lesson-box">
+                    <span style="color: var(--neon-purple); font-family: var(--font-mono); font-size: 0.75rem; display: block; margin-bottom: 0.2rem;">[LESSON LEARNED]</span>
+                    In enterprise transaction networks, optimization of error routing pipelines scales volume capacity faster than raw user funnel design.
                 </div>
             </div>
 
-            <div class="timeline-item">
-                <div class="timeline-meta">
-                    <span class="company-title">Dozee</span>
-                    <span class="role-badge">Product Manager</span>
+            <!-- Tab: Global NRI Platform -->
+            <div id="nri" class="tab-content">
+                <div class="meta-strip">
+                    <div class="meta-item"><span>INITIATIVE</span><strong>Cross-Border Platforms</strong></div>
+                    <div class="meta-item"><span>USER ARCH</span><strong>20 Lakh+ Active Nodes</strong></div>
+                    <div class="meta-item"><span>COMPLIANCE</span><strong>FATCA / FEMA Modules</strong></div>
+                </div>
+                <p class="muted" style="margin-bottom: 1rem;">
+                    Abstracted complex international banking systems and regulatory structures into a modular, product-led user experience layer optimized for global customer retention.
+                </p>
+                <ul>
+                    <li>Compressed manual processing timelines from <strong>4-5 days down to near-instant digital cycles</strong>.</li>
+                    <li>Unlocked over <strong>₹250M+ in added monthly platform opportunities</strong> through embedded wealth systems.</li>
+                </ul>
+                <div class="lesson-box">
+                    <span style="color: var(--neon-purple); font-family: var(--font-mono); font-size: 0.75rem; display: block; margin-bottom: 0.2rem;">[LESSON LEARNED]</span>
+                    Minimizing localized compliance loops directly compresses Time-to-Value (TTV), halting checkout funnel drop-offs for global users.
+                </div>
+            </div>
+
+            <!-- Tab: Sentinel Lab -->
+            <div id="sentinel" class="tab-content">
+                <div class="meta-strip">
+                    <div class="meta-item"><span>LAB PROJECT</span><strong>Sentinel (AI Prototype)</strong></div>
+                    <div class="meta-item"><span>CORE FRAME</span><strong>Domain RAG Architecture</strong></div>
+                    <div class="meta-item"><span>TARGET OPT</span><strong>Zero Human-In-Loop</strong></div>
                 </div>
                 <p class="muted">
-                    Scaled product delivery lifecycles by establishing strict agile execution cadences. Managed strategic alignment between software engineering, infrastructure teams, and clinical data modeling to deploy complex IoT and medical telemetry systems.
+                    Investigating decision-support systems to safely simplify multi-tenant financial definitions and automate complex international documentation indexing.
                 </p>
-                <div class="tag-matrix">
-                    <span class="tag">Agile Frameworks</span><span class="tag">IoT Infrastructure</span><span class="tag">Data-Driven Roadmaps</span>
+                <div class="lesson-box" style="background: rgba(56, 189, 248, 0.02); border-left-color: var(--neon-blue);">
+                    <span style="color: var(--neon-blue); font-family: var(--font-mono); font-size: 0.75rem; display: block; margin-bottom: 0.2rem;">[RESEARCH FOCUS]</span>
+                    Evaluating automated retrieval guardrails to eliminate context window leakages within sensitive platform communication flows.
                 </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-meta">
-                    <span class="company-title">MedTrail</span>
-                    <span class="role-badge">Associate Product Manager</span>
-                </div>
-                <p class="muted">
-                    Owned rapid feature prototyping pipelines, optimized workflow maps for downstream business applications, and mapped granular execution loops to isolate digital friction points.
-                </p>
-                <div class="tag-matrix">
-                    <span class="tag">User Experience Loops</span><span class="tag">Workflow Mapping</span><span class="tag">Rapid Prototyping</span>
-                </div>
-            </div>
-
-        </section>
-
-        <!-- Section: Scaled Aggregate Data Impact -->
-        <div class="section-title">03 / Aggregated Platform Impact</div>
-        <section class="impact-grid">
-            <div class="card impact-card">
-                <h3>537%</h3>
-                <p class="muted">Customer Footprint Expansion</p>
-            </div>
-            <div class="card impact-card">
-                <h3>₹250M+</h3>
-                <p class="muted">Monthly New Volume Unlocked</p>
-            </div>
-            <div class="card impact-card">
-                <h3>20L+</h3>
-                <p class="muted">Global Active Nodes Managed</p>
-            </div>
-            <div class="card impact-card">
-                <h3>8</h3>
-                <p class="muted">Cross-Functional Tracks Led</p>
             </div>
         </section>
 
-        <!-- Section: AI Lab Research Prototypes -->
-        <div class="section-title">04 / Product Research Lab</div>
-        <section style="margin-bottom: 2rem;">
-            <div class="card">
-                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.75rem;">
-                    <h3 style="font-size: 1.25rem; font-weight: 600;">Sentinel</h3>
-                    <span class="role-badge" style="background: rgba(192, 132, 252, 0.1); color: #c084fc; border-color: rgba(192, 132, 252, 0.2);">ACTIVE EXPERIMENT</span>
+        <!-- Section 3: History Timeline -->
+        <div class="section-label">03 // Production Milestones</div>
+        <section style="margin-bottom: 3.5rem;">
+            <div class="timeline-item">
+                <div class="timeline-title-row">
+                    <span class="company">ICICI Bank — Senior Product Manager</span>
+                    <span class="duration">2023 - PRESENT</span>
                 </div>
-                <p class="muted">
-                    Personal AI decision-support infrastructure engineered to interpret complex financial documentation and automate verified customer support trajectories. 
-                    <br><br>
-                    Investigating the implementation of domain-specific Retrieval-Augmented Generation (RAG) to abstract regional regulatory guidelines into low-latency interactive workflows, systematically testing methods to cut human-in-the-loop support load.
-                </p>
-                <div class="tag-matrix" style="margin-top: 1.25rem;">
-                    <span class="tag">Generative AI</span><span class="tag">RAG Frameworks</span><span class="tag">Workflow Automation</span><span class="tag">Context Layering</span>
+                <ul>
+                    <li>Led digital integration layers across Loan Against Securities and cross-border multi-currency services.</li>
+                    <li>Drove <strong>370% platform revenue surges</strong> and <strong>537% overall customer expansion parameters</strong>.</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-meta timeline-title-row">
+                    <span class="company">Dozee — Product Manager</span>
+                    <span class="duration">2021 - 2023</span>
                 </div>
+                <ul>
+                    <li>Managed engineering sprints, telemetry data architectures, and hardware/software roadmap delivery syncs.</li>
+                </ul>
             </div>
         </section>
 
     </div>
+
+    <!-- Tab Engine Logic script -->
+    <script>
+        function openTab(evt, tabId) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                tabcontent[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            document.getElementById(tabId).style.display = "block";
+            document.getElementById(tabId).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
 </body>
 </html>
