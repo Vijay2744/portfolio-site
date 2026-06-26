@@ -1,364 +1,484 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sri Naga Vijay Kethe | Enterprise AI & Fintech Product Leader</title>
-    <style>
-        :root {
-            --bg-primary: #0f172a;
-            --bg-secondary: #1e293b;
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --accent-blue: #38bdf8;
-            --accent-green: #34d399;
-            --border-color: #334155;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sri Naga Vijay Kethe | Executive Product Portfolio</title>
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-        }
+<style>
+:root{
+--bg:#06070b;
+--card:#12141c;
+--line:#232633;
+--text:#f5f7fb;
+--muted:#9aa3b2;
+--accent:#22c55e;
+}
 
-        body {
-            background-color: var(--bg-primary);
-            color: var(--text-main);
-            line-height: 1.6;
-            padding: 2rem 1rem;
-        }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
 
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
+body{
+font-family:Inter,Arial,sans-serif;
+background:var(--bg);
+color:var(--text);
+line-height:1.5;
+}
 
-        header {
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 2rem;
-            margin-bottom: 2.5rem;
-        }
+a{text-decoration:none;color:inherit;}
 
-        .header-grid {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-        }
+.wrap{
+max-width:1240px;
+margin:auto;
+padding:0 20px;
+}
 
-        h1 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            letter-spacing: -0.025em;
-            margin-bottom: 0.5rem;
-            background: linear-gradient(to right, #ffffff, var(--text-muted));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+/* NAV */
+.nav{
+position:sticky;
+top:0;
+z-index:1000;
+background:rgba(6,7,11,.92);
+backdrop-filter:blur(12px);
+border-bottom:1px solid rgba(255,255,255,.05);
+}
 
-        .tagline {
-            color: var(--accent-blue);
-            font-size: 1.15rem;
-            font-weight: 500;
-            margin-bottom: 1rem;
-        }
+.nav-inner{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:20px;
+padding:18px 0;
+}
 
-        .contact-info {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            display: flex;
-            flex-direction: column;
-            gap: 0.35rem;
-        }
+.brand{
+font-size:24px;
+font-weight:800;
+white-space:nowrap;
+}
 
-        .contact-info a {
-            color: var(--text-main);
-            text-decoration: none;
-            transition: color 0.2s;
-        }
+.menu{
+display:flex;
+gap:18px;
+overflow-x:auto;
+white-space:nowrap;
+scrollbar-width:none;
+}
 
-        .contact-info a:hover {
-            color: var(--accent-blue);
-        }
+.menu::-webkit-scrollbar{display:none;}
 
-        /* Hero Metrics Grid */
-        .metrics-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1rem;
-            margin-bottom: 3rem;
-        }
+.menu a{
+font-size:14px;
+font-weight:700;
+color:var(--muted);
+padding:8px 0;
+}
 
-        .metric-card {
-            background-color: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 1.5rem;
-            text-align: center;
-        }
+.menu a:hover{color:#fff;}
 
-        .metric-value {
-            font-size: 2rem;
-            font-weight: 800;
-            color: var(--accent-green);
-            margin-bottom: 0.25rem;
-        }
+.cta{
+background:var(--accent);
+color:#04110a !important;
+padding:10px 16px;
+border-radius:999px;
+font-weight:800;
+display:inline-block;
+}
 
-        .metric-label {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
+.secondary{
+background:transparent;
+border:1px solid rgba(255,255,255,.14);
+color:#fff !important;
+}
 
-        /* Section Layouts */
-        section {
-            margin-bottom: 3rem;
-        }
+/* HERO */
+.hero{
+padding:80px 0 46px;
+}
 
-        h2 {
-            font-size: 1.5rem;
-            border-left: 4px solid var(--accent-blue);
-            padding-left: 0.75rem;
-            margin-bottom: 1.5rem;
-            letter-spacing: -0.01em;
-        }
+.eyebrow{
+font-size:13px;
+letter-spacing:2px;
+font-weight:800;
+color:var(--accent);
+margin-bottom:16px;
+}
 
-        .card {
-            background-color: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
+.hero h1{
+font-size:68px;
+line-height:1;
+font-weight:900;
+letter-spacing:-2px;
+max-width:920px;
+}
 
-        .card-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 1rem;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
+.hero h1 span{color:var(--accent);}
 
-        .company-name {
-            font-size: 1.2rem;
-            font-weight: 700;
-        }
+.hero p{
+font-size:22px;
+color:var(--muted);
+max-width:860px;
+margin-top:22px;
+}
 
-        .job-title {
-            color: var(--text-muted);
-            font-size: 1rem;
-            margin-bottom: 0.25rem;
-        }
+.actions{
+display:flex;
+gap:14px;
+flex-wrap:wrap;
+margin-top:26px;
+}
 
-        .date-location {
-            color: var(--text-muted);
-            font-size: 0.875rem;
-            text-align: right;
-        }
+/* CARDS */
+.card{
+background:var(--card);
+border:1px solid var(--line);
+border-radius:24px;
+padding:24px;
+box-shadow:0 10px 30px rgba(0,0,0,.22);
+}
 
-        ul {
-            list-style-type: none;
-        }
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:18px;
+}
 
-        li {
-            margin-bottom: 0.75rem;
-            position: relative;
-            padding-left: 1.25rem;
-            color: var(--text-muted);
-        }
+.metrics{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:16px;
+margin-top:34px;
+}
 
-        li::before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            color: var(--accent-blue);
-            font-weight: bold;
-        }
+.metric-num{
+font-size:38px;
+font-weight:900;
+color:var(--accent);
+line-height:1;
+margin-bottom:8px;
+}
 
-        li strong {
-            color: var(--text-main);
-        }
+.muted{
+color:var(--muted);
+line-height:1.6;
+}
 
-        /* Skills Tags */
-        .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
+/* SECTION */
+section{
+padding:58px 0;
+}
 
-        .skill-tag {
-            background-color: #334155;
-            color: var(--text-main);
-            padding: 0.35rem 0.75rem;
-            border-radius: 4px;
-            font-size: 0.875rem;
-            border: 1px solid var(--border-color);
-        }
+.title{
+font-size:46px;
+font-weight:900;
+line-height:1.05;
+margin-bottom:22px;
+}
 
-        @media (max-width: 600px) {
-            .date-location {
-                text-align: left;
-                margin-top: 0.25rem;
-            }
-        }
-    </style>
+.title span{color:var(--accent);}
+
+.timeline .item{
+border-left:2px solid var(--accent);
+padding-left:18px;
+margin:24px 0;
+}
+
+.card h3{
+font-size:22px;
+margin-bottom:12px;
+}
+
+/* FOOTER */
+footer{
+padding:50px 0;
+text-align:center;
+color:var(--muted);
+border-top:1px solid rgba(255,255,255,.05);
+margin-top:20px;
+}
+
+/* MOBILE */
+@media(max-width:1000px){
+.metrics{
+grid-template-columns:1fr 1fr;
+}
+.hero h1{
+font-size:52px;
+}
+}
+
+@media(max-width:700px){
+.wrap{padding:0 16px;}
+
+.brand{font-size:20px;}
+
+.menu a{
+font-size:13px;
+padding:8px 4px;
+}
+
+.hero{
+padding-top:40px;
+}
+
+.hero h1{
+font-size:40px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.metrics{
+grid-template-columns:1fr;
+}
+
+.title{
+font-size:34px;
+}
+}
+</style>
 </head>
+
 <body>
 
-    <div class="container">
-        
-        <header>
-            <div class="header-grid">
-                <div>
-                    <h1>Sri Naga Vijay Kethe</h1>
-                    <div class="tagline">Senior Product Manager | Enterprise AI & Digital Lending Platforms</div>
-                </div>
-                <div class="contact-info">
-                    <div>📧 <a href="mailto:kethesrinagavijay@gmail.com">kethesrinagavijay@gmail.com</a></div>
-                    <div>📱 +91 9618002400</div>
-                    <div>🔗 <a href="https://linkedin.com/in/sri-naga-vijay-kethe-9a5a89125/" target="_blank">LinkedIn Profile</a></div>
-                    <div>📍 Hyderabad, India</div>
-                </div>
-            </div>
-        </header>
+<!-- NAV -->
+<div class="nav">
+<div class="wrap nav-inner">
 
-        <!-- Dynamic Impact Analytics -->
-        <section>
-            <div class="metrics-grid">
-                <div class="metric-card">
-                    <div class="metric-value">₹500M/Mo</div>
-                    <div class="metric-label">Peak Portfolio Scaled</div>
-                </div>
-                <div class="metric-card">
-                    <div class="metric-value">370% YoY</div>
-                    <div class="metric-label">Revenue Optimization Growth</div>
-                </div>
-                <div class="metric-card">
-                    <div class="metric-value">99%+</div>
-                    <div class="metric-label">API Architecture Uptime</div>
-                </div>
-                <div class="metric-card">
-                    <div class="metric-value">Instant</div>
-                    <div class="metric-label">TAT Workflow Reduction</div>
-                </div>
-            </div>
-        </section>
+<div class="brand">Sri Naga Vijay Kethe</div>
 
-        <!-- Core Flagship Asset -->
-        <section id="sentinel">
-            <h2>Featured AI Initiative</h2>
-            <div class="card" style="border-color: var(--accent-blue);">
-                <div class="card-header">
-                    <div>
-                        <span class="company-name" style="color: var(--accent-blue);">Sentinel Core Engine</span>
-                        <div class="job-title">AI-Powered Enterprise Decision-Support Platform</div>
-                    </div>
-                </div>
-                <p style="color: var(--text-muted); margin-bottom: 1rem;">
-                    Middleware architecture combining asynchronous workflow orchestration, policy intelligence models, and human oversight components to transform fragmented data points into compliant, straight-through enterprise executions.
-                </p>
-                <div class="skills-container">
-                    <span class="skill-tag">FastAPI</span>
-                    <span class="skill-tag">Decision Engines</span>
-                    <span class="skill-tag">Asynchronous Routing</span>
-                    <span class="skill-tag">Policy Intelligence</span>
-                </div>
-            </div>
-        </section>
+<div class="menu">
+<a href="#impact">IMPACT</a>
+<a href="#strategy">STRATEGY</a>
+<a href="#scale">SCALE</a>
+<a href="#career">CAREER</a>
+<a href="#projects">PROJECTS</a>
+<a href="#skills">SKILLS</a>
+<a href="#contact" class="cta">CONNECT</a>
+</div>
 
-        <!-- Professional Track -->
-        <section id="experience">
-            <h2>Professional Experience</h2>
+</div>
+</div>
 
-            <div class="card">
-                <div class="card-header">
-                    <div>
-                        <div class="company-name">ICICI Bank</div>
-                        <div class="job-title">Chief Manager - Digital Channels & Partnerships (Senior Product Manager)</div>
-                    </div>
-                    <div class="date-location">
-                        <div>Mar 2022 - Present</div>
-                        <div>Hyderabad, India</div>
-                    </div>
-                </div>
-                <ul>
-                    <li><strong>Scaled the Loan Against Securities (LAS) portfolio</strong> from ₹20M to ₹500M per month by implementing an instant digital lending journey that transformed a 4-5 day manual verification flow into a real-time, API-enabled process[cite: 1, 2].</li>
-                    <li><strong>Drove business growth mechanics</strong> generating a 370% increase in revenue yields alongside a 537% expansion of the active retail user footprint using micro-segment targeting capabilities[cite: 1, 2].</li>
-                    <li><strong>Launched zero-to-one digital lending loops</strong> across multiple channels, introducing automated limit enhancement journeys to unlock ₹250M+ in incremental monthly volume runs[cite: 1, 2].</li>
-                    <li><strong>Unified fragmented data architectures</strong> across NSDL, CDSL, and CAMS registries to support both internal and external demat accounts under a single transaction pattern[cite: 2].</li>
-                    <li><strong>Modernized credit evaluation decision models</strong> with rule-based systems to isolate unapproved assets and execute automated lien structures with a 28% reduction in runtime failures[cite: 1, 2].</li>
-                </ul>
-            </div>
+<div class="wrap">
 
-            <div class="card">
-                <div class="card-header">
-                    <div>
-                        <div class="company-name">Dozee</div>
-                        <div class="job-title">Manager - Customer Success</div>
-                    </div>
-                    <div class="date-location">
-                        <div>Aug 2021 - Mar 2022</div>
-                        <div>Hyderabad, India</div>
-                    </div>
-                </div>
-                <ul>
-                    <li><strong>Structured enterprise adoption tracks</strong> across provider healthcare systems, managing an 8-member core operational delivery squad[cite: 1].</li>
-                    <li><strong>Improved customer evaluation parameters</strong> by 15% through unified tracking tools and strict platform usage metrics[cite: 1].</li>
-                    <li><strong>Reduced support turnaround times by 30%</strong> by engineering a technical escalation loop across engineering and product maintenance groups[cite: 1].</li>
-                </ul>
-            </div>
+<!-- HERO -->
+<section class="hero">
 
-            <div class="card">
-                <div class="card-header">
-                    <div>
-                        <div class="company-name">MedTrail</div>
-                        <div class="job-title">Associate Product Manager</div>
-                    </div>
-                    <div class="date-location">
-                        <div>Aug 2019 - Jul 2021</div>
-                        <div>Delhi, India</div>
-                    </div>
-                </div>
-                <ul>
-                    <li><strong>Owned feature lifecycle priorities</strong> for a B2B SaaS platform tracking provider transaction lifecycles[cite: 1].</li>
-                    <li><strong>Analyzed usage metrics and user behaviors</strong> to refine user onboarding pipelines and reduce platform friction points[cite: 1].</li>
-                </ul>
-            </div>
-        </section>
+<div class="eyebrow">SENIOR PRODUCT MANAGER • FINTECH • DIGITAL PLATFORMS</div>
 
-        <!-- Academic Foundation -->
-        <section id="education">
-            <h2>Academic Foundation</h2>
-            <div class="card">
-                <div class="card-header">
-                    <div>
-                        <div class="company-name">IIT BHU (Varanasi)</div>
-                        <div class="job-title">Integrated Dual Degree, Biochemical Engineering</div>
-                    </div>
-                </div>
-            </div>
-        </section>
+<h1>
+I turn <span>complex lending systems</span><br>
+into simple digital experiences.
+</h1>
 
-        <!-- Technical Competencies -->
-        <section id="skills">
-            <h2>Core Competencies</h2>
-            <div class="skills-container">
-                <span class="skill-tag">API-First Product Design</span>
-                <span class="skill-tag">Digital Lending Workflows</span>
-                <span class="skill-tag">Business Rule Engines (BRE)</span>
-                <span class="skill-tag">Process Automation Architecture</span>
-                <span class="skill-tag">System Stability Optimization</span>
-                <span class="skill-tag">Fintech Integration Layers</span>
-                <span class="skill-tag">Data-Driven Roadmapping</span>
-                <span class="skill-tag">Cross-Functional Team Leadership</span>
-            </div>
-        </section>
+<p>
+Senior Product Manager delivering growth through APIs, automation, customer journeys, lending platforms, and customer service ecosystems across retail and NRI banking.
+</p>
 
-    </div>
+<div class="actions">
+<a href="#projects" class="cta">VIEW WORK</a>
+<a href="resume.pdf" target="_blank" class="cta secondary">DOWNLOAD RESUME</a>
+</div>
+
+<div class="metrics">
+
+<div class="card">
+<div class="metric-num">₹500M+</div>
+<div class="muted">Monthly Lending Scale</div>
+</div>
+
+<div class="card">
+<div class="metric-num">20L+</div>
+<div class="muted">NRI Customer Base</div>
+</div>
+
+<div class="card">
+<div class="metric-num">370%</div>
+<div class="muted">Growth Delivered</div>
+</div>
+
+<div class="card">
+<div class="metric-num">28%</div>
+<div class="muted">Failure Reduction</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- IMPACT -->
+<section id="impact">
+<div class="eyebrow">IMPACT</div>
+<div class="title">These weren’t plans. <span>These shipped.</span></div>
+
+<div class="grid">
+
+<div class="card">
+<h3>Instant Lending Journey</h3>
+<p class="muted">Reduced turnaround time from 4–5 days to near-instant approvals through digital redesign.</p>
+</div>
+
+<div class="card">
+<h3>Unified Loan Against Securities Platform</h3>
+<p class="muted">Merged fragmented flows across Shares, Mutual Funds, and Sovereign Gold Bonds.</p>
+</div>
+
+<div class="card">
+<h3>₹250M+ Opportunity</h3>
+<p class="muted">Unlocked monthly business potential through limit enhancements and product optimization.</p>
+</div>
+
+<div class="card">
+<h3>537% Customer Expansion</h3>
+<p class="muted">Scaled portfolio reach through growth initiatives and customer funnel improvements.</p>
+</div>
+
+</div>
+</section>
+
+<!-- STRATEGY -->
+<section id="strategy">
+<div class="eyebrow">STRATEGY</div>
+<div class="title">Product fundamentals I live by. <span>Not frameworks I quote.</span></div>
+
+<div class="grid">
+
+<div class="card">
+<h3>Quantify Before Solve</h3>
+<p class="muted">Prioritize through business value, user pain and funnel leakage.</p>
+</div>
+
+<div class="card">
+<h3>Evidence Over Opinion</h3>
+<p class="muted">Use data, behavior signals and measurable outcomes.</p>
+</div>
+
+<div class="card">
+<h3>Ship, Measure, Decide</h3>
+<p class="muted">Launch fast, monitor deeply, iterate intelligently.</p>
+</div>
+
+</div>
+</section>
+
+<!-- SCALE -->
+<section id="scale">
+<div class="eyebrow">SCALE</div>
+<div class="title">Three companies. <span>One pattern of impact.</span></div>
+
+<div class="grid">
+
+<div class="card">
+<h3>ICICI Bank</h3>
+<p class="muted">Lending platforms, customer service products and NRI services.</p>
+</div>
+
+<div class="card">
+<h3>Dozee</h3>
+<p class="muted">Built service excellence operations and customer outcomes at scale.</p>
+</div>
+
+<div class="card">
+<h3>MedTrail</h3>
+<p class="muted">Product workflows, adoption growth and roadmap execution.</p>
+</div>
+
+</div>
+</section>
+
+<!-- CAREER -->
+<section id="career">
+<div class="eyebrow">CAREER</div>
+<div class="title">Career journey built on <span>measurable outcomes.</span></div>
+
+<div class="timeline">
+
+<div class="item">
+<h3>ICICI Bank — Senior Product Manager</h3>
+<p class="muted">
+Owned Loan Against Securities, Customer Service Platform and currently Product Manager for NRI Services serving 20 lakh+ customers. Scaled lending portfolio from ₹20M to ₹500M+/month and delivered strong growth outcomes.
+</p>
+</div>
+
+<div class="item">
+<h3>Dozee — Manager, Customer Success</h3>
+<p class="muted">
+Built and scaled 8-member team, improved client satisfaction by 15%, reduced resolution time by 30%.
+</p>
+</div>
+
+<div class="item">
+<h3>MedTrail — Associate Product Manager</h3>
+<p class="muted">
+Roadmap execution, workflow optimization, enterprise onboarding and product adoption.
+</p>
+</div>
+
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+<div class="eyebrow">PROJECTS</div>
+<div class="title">Building products, solving problems, <span>exploring what’s next.</span></div>
+
+<div class="grid">
+
+<div class="card">
+<h3>Loan Against Securities</h3>
+<p class="muted">Digital lending transformation through API-led workflows and unified servicing operations.</p>
+</div>
+
+<div class="card">
+<h3>NRI Services Platform</h3>
+<p class="muted">Currently driving product initiatives for digital servicing journeys across 20 lakh+ users.</p>
+</div>
+
+<div class="card">
+<h3>Sentinel (Prototype)</h3>
+<p class="muted">Personal AI prototype exploring decision-support systems for simplifying financial products and automating guided responses.</p>
+</div>
+
+</div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+<div class="eyebrow">SKILLS</div>
+
+<div class="grid">
+<div class="card">Product Strategy</div>
+<div class="card">Growth</div>
+<div class="card">APIs</div>
+<div class="card">Analytics</div>
+<div class="card">Stakeholder Management</div>
+<div class="card">AI Products</div>
+</div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<div class="eyebrow">LET'S BUILD</div>
+<div class="title">Open to Senior / Lead Product Manager roles.</div>
+
+<div class="actions">
+<a href="resume.pdf" target="_blank" class="cta">DOWNLOAD RESUME</a>
+<a href="mailto:kethesrinagavijay@gmail.com" class="cta secondary">EMAIL</a>
+</div>
+</section>
+
+</div>
+
+<footer>
+Built for GitHub Pages • Sri Naga Vijay Kethe
+</footer>
 
 </body>
 </html>
